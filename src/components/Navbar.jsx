@@ -36,12 +36,12 @@ const Navbar = ({ darkMode, toggleDisplayMode }) => {
         </div>
         <div className="right_section">
 
-            <img
-              onClick={toggleDisplayMode}
-              src={darkMode ? lightmode : darkmode}
-              alt="Toggle Display Mode"
-              className="h-[30px] w-[30px] cursor-pointer"
-            />
+          <img
+            onClick={toggleDisplayMode}
+            src={darkMode ? lightmode : darkmode}
+            alt="Toggle Display Mode"
+            className="h-[30px] w-[30px] cursor-pointer"
+          />
 
         </div>
       </div>

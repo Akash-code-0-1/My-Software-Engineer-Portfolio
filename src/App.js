@@ -54,7 +54,7 @@ function App() {
           setActiveSection={setActiveSection}
         />
 
-        <main className="flex overflow-y-auto p-6 bg-white dark:bg-[#1E1E1E] text-black dark:text-white">
+        <main className="flex overflow-y-auto mt-[50px] lg:mt-[70px] 2xl:mt-[100px]  p-2 lg:pl-5 2xl:pl-20 bg-white dark:bg-[#1E1E1E] text-black dark:text-white w-full">
           {renderContent()}
         </main>
 

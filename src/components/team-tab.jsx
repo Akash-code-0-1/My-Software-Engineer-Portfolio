@@ -59,14 +59,14 @@ export default function TeamTab() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Team Projects</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Team Projects</h1>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
           Collaborative projects I've worked on with talented teams. These projects demonstrate my ability to work
           effectively in team environments and contribute to complex, multi-faceted solutions.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {teamProjects.map((project, index) => (
           <ProjectCard
             key={project.id}

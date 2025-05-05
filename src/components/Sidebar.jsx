@@ -15,12 +15,13 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
       {isActive && (
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-indigo-500 rounded-r-md" />
       )}
-      <div
-        className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${
-          isHovered
+
+
+      {/* <div
+        className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${isHovered
             ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
             : "justify-center"
-        } ${isActive ? "bg-white shadow-blue" : ""}`}
+          } ${isActive ? "bg-white shadow-blue" : ""}`}
         style={{
           width: isHovered ? "150px" : "32px",
           boxShadow:
@@ -30,15 +31,44 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
           overflow: "hidden",
           borderLeft: isActive ? "3px solid #3B82F6" : "none",
         }}
+      > */}
+
+      <div
+        className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${(isHovered || isActive)
+            ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
+            : "justify-center"
+          }`}
+        style={{
+          width: isHovered || isActive ? "150px" : "32px",
+          boxShadow:
+            isHovered || isActive
+              ? "0 0 5px rgba(59, 130, 246, 0.5)"
+              : "none",
+          overflow: "hidden",
+          borderLeft: isActive ? "3px solid #3B82F6" : "none",
+        }}
       >
+
+
+
         {icon}
+
         <span
+          className={`ml-2 font-medium text-black dark:text-white whitespace-nowrap transition-all duration-300 ${isHovered || isActive ? "opacity-100 max-w-[100px]" : "opacity-0 max-w-0"
+            }`}
+        >
+          {label}
+        </span>
+
+
+        {/* <span
           className={`ml-2 font-medium text-gray-800 whitespace-nowrap transition-all duration-300 ${
             isHovered ? "opacity-100 max-w-[100px]" : "opacity-0 max-w-0"
           }`}
         >
           {label}
-        </span>
+        </span> */}
+
       </div>
     </div>
   );
@@ -46,7 +76,7 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
 
 export default function Sidebar({ activeSection, setActiveSection }) {
   return (
-    <div className="flex flex-col h-[100vh] lg:w-[350px] bg-white dark:bg-[#1E1E1E] w-32">
+    <div className="flex flex-col h-[100vh] lg:w-[200px] bg-white dark:bg-[#1E1E1E] w-32">
       {/* Desktop Sidebar */}
       <div className="hidden lg:flex  flex-col items-center justify-center h-full ml-6 ">
         <div className="flex flex-col space-y-6 w-full">

@@ -20,7 +20,7 @@ const Navbar = ({ darkMode, toggleDisplayMode }) => {
   }, []);
 
   return (
-    <div className="navbar top-0 fixed w-full h-[60px] flex justify-center items-center bg-white dark:bg-[#1E1E1E]">
+    <div className="navbar top-0 fixed w-full h-[60px] flex justify-center items-center bg-white dark:bg-[#1e1e1e] z-10">
       <div className="flex justify-between w-3/4 h-[40px] items-center">
         <div className="left_secction flex items-center">
           {showProfilePic && (

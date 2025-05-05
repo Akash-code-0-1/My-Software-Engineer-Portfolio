@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import ProjectCard from "./project-card";
-// import ProjectCard from "./project-card"
+
 
 // Sample work data
 const workProjects = [

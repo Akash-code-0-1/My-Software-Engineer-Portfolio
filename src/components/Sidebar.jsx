@@ -48,7 +48,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
   return (
     <div className="flex flex-col h-[100vh] lg:w-[350px] bg-white dark:bg-[#1E1E1E] w-32">
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex  flex-col items-center justify-center h-full ml-6">
+      <div className="hidden lg:flex  flex-col items-center justify-center h-full ml-6 ">
         <div className="flex flex-col space-y-6 w-full">
           <NavItem
             icon={

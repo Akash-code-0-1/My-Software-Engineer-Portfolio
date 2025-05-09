@@ -2,25 +2,28 @@ import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import Hero_Section from "./components/Hero_Section";
 import Sidebar from "./components/Sidebar";
-import HomeTab from "./components/home-tab";
-import WorkTab from "./components/Work-tab";
-import TeamTab from "./components/team-tab";
+import DevelopmentTab from "./components/developmentTab";
+import ProgrammingTab from "./components/ProgrammingTab";
+import ResearchTab from "./components/ResearchTab";
 import AITab from "./components/ai-tab";
+import OthersTab from "./components/OthersTab";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("programming");
 
   const renderContent = () => {
     switch (activeSection) {
-      case "home":
-        return <HomeTab />;
-      case "work":
-        return <WorkTab />;
-      case "team":
-        return <TeamTab />;
+      case "programming":
+        return <ProgrammingTab />;
+      case "development":
+        return <DevelopmentTab />;
+      case "research":
+        return <ResearchTab />;
       case "ai":
         return <AITab />;
+      case "others":
+          return <OthersTab />;
       default:
         return <div>Select a section</div>;
     }

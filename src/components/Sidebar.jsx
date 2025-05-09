@@ -29,14 +29,14 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
               ? "0 0 15px rgba(59, 130, 246, 0.5)"
               : "none",
           overflow: "hidden",
-          borderLeft: isActive ? "3px solid #3B82F6" : "none",
+          borderLeft: isActive ? "3px solid #3B82F6" : "none",`
         }}
       > */}
 
       <div
         className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${(isHovered || isActive)
-            ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
-            : "justify-center"
+          ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
+          : "justify-center"
           }`}
         style={{
           width: isHovered || isActive ? "150px" : "32px",
@@ -91,9 +91,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
                 <path d="M5 18V18.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             }
-            label="Work"
-            isActive={activeSection === "work"}
-            onClick={() => setActiveSection("work")}
+            label="Programming"
+            isActive={activeSection === "programming"}
+            onClick={() => setActiveSection("programming")}
           />
           <NavItem
             icon={
@@ -102,21 +102,11 @@ export default function Sidebar({ activeSection, setActiveSection }) {
                 <path d="M9 22V12H15V22" stroke="#4B5563" strokeWidth="2" />
               </svg>
             }
-            label="Home"
-            isActive={activeSection === "home"}
-            onClick={() => setActiveSection("home")}
+            label="Development"
+            isActive={activeSection === "development"}
+            onClick={() => setActiveSection("development")}
           />
-          <NavItem
-            icon={
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#FFD700" strokeWidth="2" />
-                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#FFD700" strokeWidth="2" />
-              </svg>
-            }
-            label="Team"
-            isActive={activeSection === "team"}
-            onClick={() => setActiveSection("team")}
-          />
+
           <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -128,6 +118,33 @@ export default function Sidebar({ activeSection, setActiveSection }) {
             label="AI"
             isActive={activeSection === "ai"}
             onClick={() => setActiveSection("ai")}
+          />
+
+
+          <NavItem
+            icon={
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#FFD700" strokeWidth="2" />
+                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#FFD700" strokeWidth="2" />
+              </svg>
+            }
+            label="Research"
+            isActive={activeSection === "research"}
+            onClick={() => setActiveSection("research")}
+          />
+
+
+          <NavItem
+            icon={
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#4B5563" strokeWidth="2" />
+                <circle cx="12" cy="12" r="5" stroke="#4B5563" strokeWidth="2" />
+                <circle cx="12" cy="12" r="2" fill="#4B5563" />
+              </svg>
+            }
+            label="Others"
+            isActive={activeSection === "others"}
+            onClick={() => setActiveSection("others")}
           />
         </div>
       </div>
@@ -141,9 +158,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
               <path d="M9 22V12H15V22" stroke="#4B5563" strokeWidth="2" />
             </svg>
           }
-          label="Home"
-          isActive={activeSection === "home"}
-          onClick={() => setActiveSection("home")}
+          label="Programming"
+          isActive={activeSection === "programming"}
+          onClick={() => setActiveSection("programming")}
         />
         <NavItem
           icon={
@@ -156,9 +173,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
               <path d="M5 18V18.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           }
-          label="Work"
-          isActive={activeSection === "work"}
-          onClick={() => setActiveSection("work")}
+          label="Development"
+          isActive={activeSection === "development"}
+          onClick={() => setActiveSection("development")}
         />
         <NavItem
           icon={
@@ -167,9 +184,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
               <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#FFD700" strokeWidth="2" />
             </svg>
           }
-          label="Team"
-          isActive={activeSection === "team"}
-          onClick={() => setActiveSection("team")}
+          label="AI"
+          isActive={activeSection === "ai"}
+          onClick={() => setActiveSection("ai")}
         />
         <NavItem
           icon={

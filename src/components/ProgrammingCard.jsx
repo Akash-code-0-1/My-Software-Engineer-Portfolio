@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
-interface WorkCardProps {
+interface ProgrammingCardProps {
   title: string
   description: string
   image: string
@@ -14,7 +14,7 @@ interface WorkCardProps {
   delay?: number
 }
 
-export default function WorkCard({ title, description, image, tags, link, delay = 0 }: WorkCardProps) {
+export default function ProgrammingCard({ title, description, image, tags, link, delay = 0 }: ProgrammingCardProps {) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (

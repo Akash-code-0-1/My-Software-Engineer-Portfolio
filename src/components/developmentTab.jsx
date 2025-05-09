@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import ProjectCard from "./project-card"
 
 // Sample home projects data
-const homeProjects = [
+const developmentProjects = [
   {
     id: 1,
     title: "Personal Blog",
@@ -39,7 +39,7 @@ const homeProjects = [
   },
 ]
 
-export default function HomeTab() {
+export default function DevelopmentTab() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
       <motion.div
@@ -56,7 +56,7 @@ export default function HomeTab() {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  gap-6">
-        {homeProjects.map((project, index) => (
+        {developmentProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
             title={project.title}

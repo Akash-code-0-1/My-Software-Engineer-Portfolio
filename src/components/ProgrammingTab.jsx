@@ -57,7 +57,7 @@ const workProjects = [
   },
 ]
 
-export default function WorkTab() {
+export default function ProgrammingTab() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
       <motion.div

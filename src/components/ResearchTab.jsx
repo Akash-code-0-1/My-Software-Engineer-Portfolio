@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import ProjectCard from "./project-card"
 
 // Sample team projects data
-const teamProjects = [
+const researchProjects = [
   {
     id: 1,
     title: "Enterprise CRM",
@@ -50,7 +50,7 @@ const teamProjects = [
   },
 ]
 
-export default function TeamTab() {
+export default function ResearchTab() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
       <motion.div
@@ -67,7 +67,7 @@ export default function TeamTab() {
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {teamProjects.map((project, index) => (
+        {researchProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
             title={project.title}

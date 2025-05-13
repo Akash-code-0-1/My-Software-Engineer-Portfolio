@@ -3,18 +3,16 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
 
-interface ProgrammingCardProps {
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  link: string
-  delay?: number
-}
-
-export default function ProgrammingCard({ title, description, image, tags, link, delay = 0 }: ProgrammingCardProps {) {
+export default function ProgrammingCard({
+  title,
+  description,
+  image,
+  video,
+  tags,
+  link,
+  delay = 0,
+}) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -27,12 +25,23 @@ export default function ProgrammingCard({ title, description, image, tags, link,
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative aspect-video overflow-hidden">
-        <img
-          src={image || "/placeholder.svg"}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+      <div className="relative aspect-video overflow-hidden group">
+        {video ? (
+          <video
+            src={video}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={image || "/placeholder.svg"}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
@@ -48,13 +57,12 @@ export default function ProgrammingCard({ title, description, image, tags, link,
 
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag) => (
-            <Badge
+            <span
               key={tag}
-              variant="outline"
-              className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+              className="px-3 py-1 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
               {tag}
-            </Badge>
+            </span>
           ))}
         </div>
 

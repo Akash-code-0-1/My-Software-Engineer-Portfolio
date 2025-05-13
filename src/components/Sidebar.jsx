@@ -76,19 +76,15 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
 
 export default function Sidebar({ activeSection, setActiveSection }) {
   return (
-    <div className="flex flex-col h-[100vh] lg:w-[200px] bg-white dark:bg-[#1E1E1E] w-32">
+    <div className="flex flex-col h-[100vh] lg:w-[200px] bg-white dark:bg-[#1E1E1E]">
       {/* Desktop Sidebar */}
       <div className="hidden lg:flex  flex-col items-center justify-center h-full ml-6 ">
         <div className="flex flex-col space-y-6 w-full">
           <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 6H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M9 12H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M9 18H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M5 6V6.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M5 12V12.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M5 18V18.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M8 6L4 12L8 18" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M16 6L20 12L16 18" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             }
             label="Programming"
@@ -98,9 +94,12 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#4B5563" strokeWidth="2" />
-                <path d="M9 22V12H15V22" stroke="#4B5563" strokeWidth="2" />
+                <rect x="3" y="4" width="18" height="14" rx="2" stroke="#FF9800" strokeWidth="2" />
+                <path d="M8 20H16" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" />
+                <path d="M10 8L8 10L10 12" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M14 8L16 10L14 12" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
+
             }
             label="Development"
             isActive={activeSection === "development"}
@@ -110,10 +109,11 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="#4B5563" strokeWidth="2" />
-                <circle cx="12" cy="12" r="5" stroke="#4B5563" strokeWidth="2" />
-                <circle cx="12" cy="12" r="2" fill="#4B5563" />
+                <path d="M9 3C7.34315 3 6 4.34315 6 6V18C6 19.6569 7.34315 21 9 21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
+                <path d="M15 3C16.6569 3 18 4.34315 18 6V18C18 19.6569 16.6569 21 15 21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
+                <path d="M12 3V21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
               </svg>
+
             }
             label="AI"
             isActive={activeSection === "ai"}
@@ -124,9 +124,13 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#FFD700" strokeWidth="2" />
-                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#FFD700" strokeWidth="2" />
+                <path d="M14 11C15.6569 11 17 9.65685 17 8C17 6.34315 15.6569 5 14 5C12.3431 5 11 6.34315 11 8C11 9.65685 12.3431 11 14 11Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M16 10L21 15" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5 4H9C10.6569 4 12 5.34315 12 7V17C12 18.6569 10.6569 20 9 20H5V4Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
+
+
+
             }
             label="Research"
             isActive={activeSection === "research"}
@@ -136,11 +140,11 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
           <NavItem
             icon={
+
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="#4B5563" strokeWidth="2" />
-                <circle cx="12" cy="12" r="5" stroke="#4B5563" strokeWidth="2" />
-                <circle cx="12" cy="12" r="2" fill="#4B5563" />
+                <path d="M4 4H8V6C8 7.65685 9.34315 9 11 9H13C14.6569 9 16 10.3431 16 12V14H20V20H4V4Z" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
+
             }
             label="Others"
             isActive={activeSection === "others"}
@@ -154,8 +158,8 @@ export default function Sidebar({ activeSection, setActiveSection }) {
         <NavItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#4B5563" strokeWidth="2" />
-              <path d="M9 22V12H15V22" stroke="#4B5563" strokeWidth="2" />
+              <path d="M8 6L4 12L8 18" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M16 6L20 12L16 18" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           }
           label="Programming"
@@ -165,40 +169,62 @@ export default function Sidebar({ activeSection, setActiveSection }) {
         <NavItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M9 6H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M9 12H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M9 18H20" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5 6V6.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5 12V12.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5 18V18.01" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <rect x="3" y="4" width="18" height="14" rx="2" stroke="#FF9800" strokeWidth="2" />
+              <path d="M8 20H16" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" />
+              <path d="M10 8L8 10L10 12" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M14 8L16 10L14 12" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
+
           }
           label="Development"
           isActive={activeSection === "development"}
           onClick={() => setActiveSection("development")}
         />
+
         <NavItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#FFD700" strokeWidth="2" />
-              <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#FFD700" strokeWidth="2" />
+              <path d="M9 3C7.34315 3 6 4.34315 6 6V18C6 19.6569 7.34315 21 9 21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
+              <path d="M15 3C16.6569 3 18 4.34315 18 6V18C18 19.6569 16.6569 21 15 21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
+              <path d="M12 3V21" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" />
             </svg>
+
+
           }
           label="AI"
           isActive={activeSection === "ai"}
           onClick={() => setActiveSection("ai")}
         />
+
+
         <NavItem
           icon={
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="#4B5563" strokeWidth="2" />
-              <circle cx="12" cy="12" r="5" stroke="#4B5563" strokeWidth="2" />
-              <circle cx="12" cy="12" r="2" fill="#4B5563" />
+              <path d="M14 11C15.6569 11 17 9.65685 17 8C17 6.34315 15.6569 5 14 5C12.3431 5 11 6.34315 11 8C11 9.65685 12.3431 11 14 11Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M16 10L21 15" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M5 4H9C10.6569 4 12 5.34315 12 7V17C12 18.6569 10.6569 20 9 20H5V4Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
+
+
+
           }
-          label="AI"
-          isActive={activeSection === "ai"}
-          onClick={() => setActiveSection("ai")}
+          label="Research"
+          isActive={activeSection === "research"}
+          onClick={() => setActiveSection("research")}
+        />
+
+
+        <NavItem
+          icon={
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4H8V6C8 7.65685 9.34315 9 11 9H13C14.6569 9 16 10.3431 16 12V14H20V20H4V4Z" stroke="#FF9800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+
+          }
+          label="Others"
+          isActive={activeSection === "others"}
+          onClick={() => setActiveSection("others")}
         />
       </div>
     </div>

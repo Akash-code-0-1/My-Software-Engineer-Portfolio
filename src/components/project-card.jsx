@@ -4,7 +4,7 @@ import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 
-export default function ProjectCard({ title, description, image, tags, link, index }) {
+export default function ProjectCard({ title, description, image, video, tags, link, index }) {
   const [isHovered, setIsHovered] = useState(false)
   const cardRef = useRef(null)
 
@@ -27,14 +27,29 @@ export default function ProjectCard({ title, description, image, tags, link, ind
       className="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2A2A2A] shadow-lg"
     >
       <div className="aspect-video overflow-hidden">
-        <motion.img
-          src={image || "/placeholder.svg?height=200&width=400"}
-          alt={title}
-          className="w-full h-full object-cover"
-          initial={{ scale: 1 }}
-          animate={{ scale: isHovered ? 1.05 : 1 }}
-          transition={{ duration: 0.4 }}
-        />
+        {video ? (
+          <motion.video
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            initial={{ scale: 1 }}
+            animate={{ scale: isHovered ? 1.05 : 1 }}
+            transition={{ duration: 0.4 }}
+          />
+        ) : (
+          <motion.img
+            src={image || "/placeholder.svg?height=200&width=400"}
+            alt={title}
+            className="w-full h-full object-cover"
+            initial={{ scale: 1 }}
+            animate={{ scale: isHovered ? 1.05 : 1 }}
+            transition={{ duration: 0.4 }}
+          />
+        )}
+
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"
           initial={{ opacity: 0 }}
@@ -42,7 +57,6 @@ export default function ProjectCard({ title, description, image, tags, link, ind
           transition={{ duration: 0.3 }}
         />
       </div>
-
 
       <motion.div
         className="absolute top-0 right-0 m-4 z-10"

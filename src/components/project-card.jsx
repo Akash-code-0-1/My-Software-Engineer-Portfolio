@@ -2,9 +2,9 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 
-export default function ProjectCard({ title, description, image, video, tags, link, index }) {
+export default function ProjectCard({ title, description, image, video, tags, link, gitLink, index }) {
   const [isHovered, setIsHovered] = useState(false)
   const cardRef = useRef(null)
 
@@ -59,19 +59,33 @@ export default function ProjectCard({ title, description, image, video, tags, li
       </div>
 
       <motion.div
-        className="absolute top-0 right-0 m-4 z-10"
+        className="absolute top-0 right-0 m-4 z-10 flex gap-2"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0.8 }}
         transition={{ duration: 0.3 }}
       >
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white dark:bg-[#2A2A2A] p-2 rounded-full shadow-lg"
-        >
-          <ExternalLink size={16} className="text-orange-500" />
-        </a>
+        {gitLink && (
+          <a
+            href={gitLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white dark:bg-[#2A2A2A] p-2 rounded-full shadow-lg"
+            aria-label="GitHub Repository"
+          >
+            <Github size={16} className="text-orange-500" />
+          </a>
+        )}
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white dark:bg-[#2A2A2A] p-2 rounded-full shadow-lg"
+            aria-label="Live Project"
+          >
+            <ExternalLink size={16} className="text-orange-500" />
+          </a>
+        )}
       </motion.div>
 
       <div className="p-5 relative z-10">

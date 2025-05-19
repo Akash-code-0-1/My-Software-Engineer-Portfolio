@@ -2,17 +2,20 @@
 
 import { motion } from "framer-motion";
 import ProjectCard from "./project-card";
+import { FaPython, FaJava } from "react-icons/fa";
+import { SiC, SiCplusplus } from "react-icons/si";
 
 
-const workProjects = [
+const programmingProjects = [
   {
     id: 1,
     title: "Sorting Algorithm Visualizer",
     description:
       "An interactive visualizer for sorting algorithms like Bubble Sort, Merge Sort, and Radix Sort with speed control and animations for better understanding.",
     video: "/sortViz.mp4",
-    tags: ["React", "Tailwind CSS", "JavaScript", "Data Structures"],
+    tags: ["React", "CSS", "JavaScript", "Data Structures"],
     link: "https://sortingvisualizer-six.vercel.app/",
+    gitLink: "https://github.com/Akash-code-0-1/SortViz",
   },
   {
     id: 2,
@@ -20,8 +23,9 @@ const workProjects = [
     description:
       "A graph algorithm visualizer with support for BFS, DFS, and more. Built with dynamic UI controls and real-time pathfinding animations.",
     video: "/graph-visualizer.mp4",
-    tags: ["React", "Algorithms", "Graph Theory", "Tailwind CSS"],
-    link: "#",
+    tags: ["Next.js", "Algorithms", "Graph Theory", "Tailwind CSS"],
+    link: "https://graphalgorithmvisualizer.vercel.app/",
+    gitLink: "https://github.com/Akash-code-0-1/Graph-Algorithms-Visualization",
   },
   {
     id: 3,
@@ -30,7 +34,8 @@ const workProjects = [
       "A code execution visualizer that simulates line-by-line code behavior with animations and real-world analogies, designed for beginners to understand how code flows.",
     video: "/code-visualizer.mp4",
     tags: ["React", "Tailwind", "JavaScript", "Education"],
-    link: "#",
+    link: "https://sortingvisualizer-six.vercel.app/",
+    gitLink: "https://github.com/Akash-code-0-1/SortViz",
   },
   {
     id: 4,
@@ -38,7 +43,8 @@ const workProjects = [
     description: "A responsive portfolio website with animated transitions and dark mode support.",
     image: "/placeholder.svg?height=200&width=400",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    link: "#",
+    link: "https://sortingvisualizer-six.vercel.app/",
+    gitLink: "https://github.com/Akash-code-0-1/SortViz",
   },
   {
     id: 5,
@@ -46,32 +52,32 @@ const workProjects = [
     description: "A collaborative task management application with real-time updates and team features.",
     image: "/placeholder.svg?height=200&width=400",
     tags: ["React", "Firebase", "Material UI"],
-    link: "#",
+    link: "https://sortingvisualizer-six.vercel.app/",
+    gitLink: "https://github.com/Akash-code-0-1/SortViz",
+  },
+];
+
+const languages = [
+  {
+    name: "C",
+    icon: SiC,
+    color: "text-blue-600", // Blue
   },
   {
-    id: 6,
-    title: "Weather Dashboard",
-    description: "A weather dashboard that displays current and forecasted weather data with interactive maps.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["JavaScript", "OpenWeather API", "Chart.js"],
-    link: "#",
+    name: "C++",
+    icon: SiCplusplus,
+    color: "text-indigo-600", // Indigo
   },
   {
-    id: 7,
-    title: "Social Media App",
-    description: "A social media platform with user profiles, posts, comments, and real-time notifications.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["React Native", "Express", "MongoDB", "Socket.io"],
-    link: "#",
+    name: "Python",
+    icon: FaPython,
+    color: "text-yellow-500", // Yellow (top), blue (bottom)
   },
   {
-    id: 8,
-    title: "Fitness Tracker",
-    description: "A fitness tracking application that monitors workouts, nutrition, and progress over time.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Flutter", "Firebase", "Google Fit API"],
-    link: "#",
-  }
+    name: "Java",
+    icon: FaJava,
+    color: "text-red-600", // Red
+  },
 ];
 
 
@@ -93,6 +99,44 @@ export default function ProgrammingTab() {
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl text-center lg:text-left mb-6">
             Programming is more than a skill—it's a passion. I actively solve real-world problems through code and continually sharpen my skills on platforms like LeetCode, GitHub, and Codeforces. This section reflects my growth as a software engineer, showcasing consistency, problem-solving abilities, and a strong commitment to clean, efficient code.
           </p>
+
+          {/* Animated Colorful Icons */}
+          <motion.div
+            className="flex justify-center lg:justify-start gap-10 flex-wrap mt-8 mb-8"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+          >
+            {languages.map((lang, index) => {
+              const Icon = lang.icon;
+              return (
+                <motion.div
+                  key={lang.name}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.6, y: 20 },
+                    visible: { opacity: 1, scale: 1, y: 0 },
+                  }}
+                  whileHover={{ scale: 1.15, rotate: 3 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex flex-col items-center group"
+                >
+                  <Icon
+                    size={50}
+                    className={`${lang.color} transition-transform duration-300`}
+                  />
+                  <span className="text-sm mt-2 text-gray-700 dark:text-gray-200 font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    {lang.name}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* LeetCode Profile */}
@@ -170,7 +214,7 @@ export default function ProgrammingTab() {
 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {workProjects.map((project, index) => (
+        {programmingProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
             title={project.title}
@@ -179,6 +223,7 @@ export default function ProgrammingTab() {
             video={project.video}
             tags={project.tags}
             link={project.link}
+            gitLink={project.gitLink}
             delay={index}
           />
         ))}

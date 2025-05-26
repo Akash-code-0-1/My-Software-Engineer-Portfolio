@@ -12,7 +12,7 @@ const programmingProjects = [
     title: "Sorting Algorithm Visualizer",
     description:
       "An interactive visualizer for sorting algorithms like Bubble Sort, Merge Sort, and Radix Sort with speed control and animations for better understanding.",
-    video: "/sortViz.mp4",
+    video: "/SortViz.mp4",
     tags: ["React", "CSS", "JavaScript", "Data Structures"],
     link: "https://sortingvisualizer-six.vercel.app/",
     gitLink: "https://github.com/Akash-code-0-1/SortViz",
@@ -22,7 +22,7 @@ const programmingProjects = [
     title: "Graph Algorithm Visualizer",
     description:
       "A graph algorithm visualizer with support for BFS, DFS, and more. Built with dynamic UI controls and real-time pathfinding animations.",
-    video: "/graph-visualizer.mp4",
+    video: "/graph.mp4",
     tags: ["Next.js", "Algorithms", "Graph Theory", "Tailwind CSS"],
     link: "https://graphalgorithmvisualizer.vercel.app/",
     gitLink: "https://github.com/Akash-code-0-1/Graph-Algorithms-Visualization",
@@ -39,22 +39,22 @@ const programmingProjects = [
   },
   {
     id: 4,
-    title: "Portfolio Website",
-    description: "A responsive portfolio website with animated transitions and dark mode support.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    link: "https://sortingvisualizer-six.vercel.app/",
-    gitLink: "https://github.com/Akash-code-0-1/SortViz",
+    title: "Bus Ticket Management System",
+    description: "A console-based bus ticket management system built using C++. It allows users to book, cancel, and view tickets with route and seat management.",
+    video: "",
+    tags: ["C++", "OOP", "Console App", "File Handling"],
+    link: "",
+    gitLink: "https://github.com/Akash-code-0-1/Bus-Ticket-Management-C-"
   },
   {
     id: 5,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team features.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["React", "Firebase", "Material UI"],
-    link: "https://sortingvisualizer-six.vercel.app/",
-    gitLink: "https://github.com/Akash-code-0-1/SortViz",
-  },
+    title: "Student Activity Planner",
+    description: "A simple terminal-based student activity planner developed in C. It helps students manage their daily tasks, assignments, and schedules efficiently.",
+    video: "",
+    tags: ["C", "CLI", "Struct", "File Handling"],
+    link: "",
+    gitLink: "https://github.com/Akash-code-0-1/Student-Activity-Planner-C-"
+  }
 ];
 
 const languages = [
@@ -96,7 +96,7 @@ export default function ProgrammingTab() {
             Programming
           </h1>
 
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl text-center lg:text-left mb-6">
+          <p className="text-gray-600 dark:text-gray-300 lg:text-[18px] max-w-3xl text-center lg:text-left mb-6">
             Programming is more than a skill—it's a passion. I actively solve real-world problems through code and continually sharpen my skills on platforms like LeetCode, GitHub, and Codeforces. This section reflects my growth as a software engineer, showcasing consistency, problem-solving abilities, and a strong commitment to clean, efficient code.
           </p>
 

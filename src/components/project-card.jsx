@@ -51,11 +51,12 @@ export default function ProjectCard({ title, description, image, video, tags, li
         )}
 
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
+          className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"
+          initial={{ opacity: 1 }} // Default: gradient is visible
+          animate={{ opacity: isHovered ? 0 : 1 }} // On hover: fade out
           transition={{ duration: 0.3 }}
         />
+
       </div>
 
       <motion.div

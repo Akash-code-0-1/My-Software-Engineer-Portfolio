@@ -121,7 +121,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
           />
 
 
-          <NavItem
+          {/* <NavItem
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M14 11C15.6569 11 17 9.65685 17 8C17 6.34315 15.6569 5 14 5C12.3431 5 11 6.34315 11 8C11 9.65685 12.3431 11 14 11Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -135,7 +135,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
             label="Research"
             isActive={activeSection === "research"}
             onClick={() => setActiveSection("research")}
-          />
+          /> */}
 
 
           <NavItem

@@ -388,13 +388,7 @@ export default function OthersTab() {
     selectedCategory === "All" ? galleryItems : galleryItems.filter((item) => item.category === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      {/* Dark Mode Toggle */}
-      <div className="fixed top-4 right-4 z-40">
-        <Button variant="secondary" size="sm" onClick={() => setDarkMode(!darkMode)} className="p-2">
-          {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-        </Button>
-      </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-[#1E1E1E] transition-colors duration-300">
 
       <motion.div
         initial={{ opacity: 0 }}

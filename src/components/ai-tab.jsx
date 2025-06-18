@@ -21,97 +21,80 @@ import { Code2 } from "lucide-react"
 const publications = [
   {
     id: 1,
-    title: "Deep Learning Approaches for Real-Time Object Detection in Autonomous Vehicles",
-    authors: ["Your Name", "Dr. Jane Smith", "Dr. John Doe"],
-    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+    title: "Bengali Text Classification: Distinguishing Saintly and Common Forms using Machine Learning Model",
+    authors: ["MD. Tanvir Ahmed Akash", "Umme Ayman", "Saiham Zaman Mridul"],
+    venue: "2024 IEEE International Conference on Computing, Applications and Systems (COMPAS)",
     year: 2024,
     type: "Conference",
-    citations: 23,
     abstract:
-      "This paper presents a novel deep learning architecture for real-time object detection in autonomous driving scenarios, achieving 95% accuracy with 60 FPS performance.",
-    tags: ["Computer Vision", "Deep Learning", "Autonomous Vehicles"],
-    link: "#",
-    pdfLink: "#",
-    codeLink: "#",
+      "This study presents a Bengali text classification model that distinguishes between Sadhu and Cholito forms using supervised machine learning on a dataset of 2948 texts. After preprocessing, six algorithms were evaluated, with SVM achieving the highest accuracy of 92.33%, followed by RF (91.87%) and XGB (91.20%). This work contributes to the limited research in Bengali language processing.",
+    tags: ["NLP", "Machine Learning", "Bengali Language"],
+    link: "https://ieeexplore.ieee.org/document/10796448",
   },
   {
     id: 2,
-    title: "Federated Learning for Privacy-Preserving Healthcare Analytics",
-    authors: ["Your Name", "Dr. Alice Johnson"],
-    venue: "Nature Machine Intelligence",
-    year: 2024,
-    type: "Journal",
-    citations: 45,
+    title: "BanglaEcomReviewCorpus: A Dataset for E-Commerce Product Review Sentiment Analysis",
+    authors: ["MD. Tanvir Ahmed Akash", "Umme Ayman", "Saiham Zaman Mridul"],
+    venue: "Under Review",
+    year: 2025,
+    type: "Dataset",
     abstract:
-      "We propose a federated learning framework that enables collaborative machine learning on sensitive healthcare data while preserving patient privacy.",
-    tags: ["Federated Learning", "Healthcare", "Privacy"],
+      "BanglaEcomReviewCorpus is a curated dataset designed for sentiment analysis of Bangla-language e-commerce product reviews. It supports research in natural language processing and sentiment classification in low-resource languages.",
+    tags: ["NLP", "Sentiment Analysis", "Bangla", "E-Commerce", "Dataset"],
     link: "#",
-    pdfLink: "#",
-    codeLink: "#",
   },
-  {
-    id: 3,
-    title: "Transformer-Based Natural Language Processing for Code Generation",
-    authors: ["Your Name", "Dr. Bob Wilson", "Dr. Carol Brown"],
-    venue: "International Conference on Machine Learning (ICML)",
-    year: 2023,
-    type: "Conference",
-    citations: 67,
-    abstract:
-      "A comprehensive study on using transformer architectures for automated code generation, demonstrating significant improvements over existing methods.",
-    tags: ["NLP", "Code Generation", "Transformers"],
-    link: "#",
-    pdfLink: "#",
-    codeLink: "#",
-  },
+
 ]
 
 // Sample AI projects data
 const aiProjects = [
   {
     id: 1,
-    title: "Neural Style Transfer Web App",
+    title: "Heart Disease Prediction Using Vectorizers",
     description:
-      "A real-time neural style transfer application using TensorFlow.js that applies artistic styles to images in the browser.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["TensorFlow.js", "React", "Computer Vision", "WebGL"],
-    link: "#",
-    githubLink: "#",
-    demoLink: "#",
+      "A comparative analysis of heart disease prediction using CountVectorizer and TF-IDF vectorizer with multiple classifiers like Naive Bayes, Random Forest, and SVM achieving up to 84.78% accuracy.",
+    image: "/heart.jpg",
+    tags: ["Machine Learning", "Healthcare", "TF-IDF", "CountVectorizer", "Python"],
+    link: "https://drive.google.com/file/d/1uIvq3DLun3UAE6cCdaSf0apGxNasnFDL/view?usp=sharing",
   },
   {
     id: 2,
-    title: "Multimodal Sentiment Analysis",
+    title: "Breast Cancer Classification with Machine Learning",
     description:
-      "Advanced sentiment analysis combining text, audio, and visual features using ensemble deep learning models.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["PyTorch", "Multimodal", "NLP", "Computer Vision"],
-    link: "#",
-    githubLink: "#",
-    demoLink: "#",
+      "Classification of malignant and benign breast tumors using various machine learning algorithms including SVM, Random Forest, and Neural Networks, achieving up to 98% test accuracy.",
+    image: "/breast.jpg",
+    tags: ["Scikit-learn", "TensorFlow", "Healthcare", "SVM", "Neural Network"],
+    link: "https://drive.google.com/file/d/15_BEu1aYMMlgSGppMPtJ03N7ZH55mSk8/view?usp=sharing",
   },
   {
     id: 3,
-    title: "Reinforcement Learning Trading Bot",
+    title: "Kaggle Challenge: Obesity Level Prediction",
     description:
-      "An autonomous trading system using deep Q-learning and LSTM networks for cryptocurrency market prediction.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Reinforcement Learning", "Finance", "LSTM", "Python"],
-    link: "#",
-    githubLink: "#",
-    demoLink: "#",
+      "Participated in a Kaggle competition focused on predicting obesity levels using machine learning techniques, leveraging feature engineering and various classification algorithms.",
+    image: "/kaggle.png",
+    tags: ["Kaggle", "ML", "Health", "Classification", "Python"],
+    link: "https://www.kaggle.com/competitions/obesity-level-prediction-fall-2024/leaderboard",
   },
   {
     id: 4,
-    title: "Graph Neural Network for Drug Discovery",
-    description: "Molecular property prediction using graph neural networks to accelerate drug discovery processes.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["GNN", "Drug Discovery", "PyTorch Geometric", "Bioinformatics"],
+    title: "Human Emotion Detection from Thermal Images",
+    description:
+      "A work-in-progress AI system designed to detect and classify human emotions based on facial thermal imaging data using computer vision and deep learning techniques.",
+    image: "/emotion.PNG",
+    tags: ["Thermal Imaging", "Emotion Detection", "CNN", "Computer Vision"],
     link: "#",
-    githubLink: "#",
-    demoLink: "#",
   },
-]
+  {
+    id: 5,
+    title: "Criminal Suspect Detection Using Thermal Imaging",
+    description:
+      "An ongoing project aiming to identify potential criminal suspects by analyzing thermal imaging patterns through behavior detection and face analysis.",
+    image: "/thermal.png",
+    tags: ["Thermal Imaging", "Criminal Detection", "Deep Learning", "AI Surveillance"],
+    link: "#",
+  },
+];
+
 
 export default function AiTab() {
   return (

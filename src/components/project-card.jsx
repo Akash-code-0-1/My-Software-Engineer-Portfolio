@@ -26,6 +26,32 @@ export default function ProjectCard({ title, description, image, video, tags, li
       onMouseLeave={() => setIsHovered(false)}
       className="group relative overflow-hidden rounded-xl bg-white dark:bg-[#2A2A2A] shadow-lg"
     >
+
+      {/* {tags?.includes("In Development") && (
+        <div
+          className="absolute top-8 left-24 z-20 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 
+               font-semibold rounded-full shadow-lg 
+               text-gray-900 
+               bg-yellow-500 
+               border-2 border-orange-500 
+               animate-pulse">
+          🚧 In Development
+        </div>
+      )} */}
+
+      {tags?.includes("In Development") && (
+        <div
+          className="absolute top-8 left-24 z-20 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 
+               font-semibold rounded-full shadow-md 
+               text-gray-900 
+               backdrop-filter backdrop-blur-md 
+               border border-gray-500 dark:text-white">
+          🛠 In Development
+        </div>
+      )}
+
+
+
       <div className="aspect-video overflow-hidden">
         {video ? (
           <motion.video

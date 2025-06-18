@@ -27,22 +27,29 @@ const programmingProjects = [
     link: "https://graphalgorithmvisualizer.vercel.app/",
     gitLink: "https://github.com/Akash-code-0-1/Graph-Algorithms-Visualization",
   },
-  {
-    id: 3,
-    title: "Code Execution Visualizer",
-    description:
-      "A code execution visualizer that simulates line-by-line code behavior with animations and real-world analogies, designed for beginners to understand how code flows.",
-    video: "/code-visualizer.mp4",
-    tags: ["React", "Tailwind", "JavaScript", "Education"],
-    link: "https://sortingvisualizer-six.vercel.app/",
-    gitLink: "https://github.com/Akash-code-0-1/SortViz",
-  },
+  // {
+  //   id: 3,
+  //   title: "Code Execution Visualizer",
+  //   description:
+  //     "A code execution visualizer that simulates line-by-line code behavior with animations and real-world analogies, designed for beginners to understand how code flows.",
+  //   video: "/code-visualizer.mp4",
+  //   tags: [
+  //   "React",
+  //   "Tailwind",
+  //   "JavaScript",
+  //   "Education",
+  //   "In Development" // <- NEW
+  // ],
+  //   link: "https://sortingvisualizer-six.vercel.app/",
+  //   gitLink: "https://github.com/Akash-code-0-1/SortViz",
+  // },
+
   {
     id: 4,
     title: "Bus Ticket Management System",
-    description: "A console-based bus ticket management system built using C++. It allows users to book, cancel, and view tickets with route and seat management.",
-    video: "",
-    tags: ["C++", "OOP", "Console App", "File Handling"],
+    description: "A terminal-based bus ticket management system built using C++. It allows users to book, cancel, and view tickets with route and seat management.",
+    video: "/busTicket.mp4",
+    tags: ["C++", "OOP", "File Handling","Linked List","stack"],
     link: "",
     gitLink: "https://github.com/Akash-code-0-1/Bus-Ticket-Management-C-"
   },
@@ -50,8 +57,8 @@ const programmingProjects = [
     id: 5,
     title: "Student Activity Planner",
     description: "A simple terminal-based student activity planner developed in C. It helps students manage their daily tasks, assignments, and schedules efficiently.",
-    video: "",
-    tags: ["C", "CLI", "Struct", "File Handling"],
+    video: "/activityPlanner.mp4",
+    tags: ["C", "Struct", "File Handling"],
     link: "",
     gitLink: "https://github.com/Akash-code-0-1/Student-Activity-Planner-C-"
   }
@@ -182,7 +189,7 @@ export default function ProgrammingTab() {
             </div>
 
             {/* Codeforces Profile */}
-            <div className="flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-4">
+            {/* <div className="flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-4">
               <img
                 src="https://userpic.codeforces.org/3569247/title/bddbc81da28fd039.jpg" // Replace with your Codeforces avatar
                 alt="Codeforces Profile"
@@ -200,7 +207,9 @@ export default function ProgrammingTab() {
                   View Profile →
                 </a>
               </div>
-            </div>
+            </div> */}
+
+            
           </div>
         </section>
 

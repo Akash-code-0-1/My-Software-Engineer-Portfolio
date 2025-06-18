@@ -12,8 +12,9 @@ const webDevProjects = [
     title: "Full-Stack Social Media WebApp",
     description:
       "A feature-rich full-stack social media application developed using MySQL, Node.js, HTML, CSS, JavaScript, and React.js. It includes user authentication, post sharing, likes, comments, and responsive design.",
-    tags: ["MySQL", "Node.js", "React.js", "HTML", "CSS", "JavaScript", "Full-Stack"],
-    link: "#", // Replace with your actual link
+    tags: ["MySQL", "Node.js", "React.js", "HTML", "CSS", "JavaScript", "Full-Stack","In Development" ],
+    video: "/socialMedia.mp4", 
+    gitLink: "https://github.com/Akash-code-0-1/Complete-Social-Media-Web-Application",
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const webDevProjects = [
       "HandsOn is a community-driven platform for organizing and joining social work initiatives. Built with Next.js and Tailwind CSS, it features modern UI components, real-time data display, and responsive layouts.",
     tags: ["Next.js", "Tailwind CSS", "React", "Community Platform"],
     video: "/handsOn.mp4", 
-    link: "#", // Replace with your actual link
+    gitLink: "https://github.com/Akash-code-0-1/HandsON-Community-Volunteers-WebApplication",
   },
   {
     id: 3,
@@ -31,7 +32,8 @@ const webDevProjects = [
       "Genesis is a fully responsive web application designed to centralize fire safety and security management. Built with React.js, Tailwind CSS, and Vite, it delivers modular architecture and seamless user experience.",
     video: "/genesis.mp4", // Optional: replace with real video if you have
     tags: ["React.js", "Vite", "Tailwind CSS", "Responsive UI"],
-    link: "https://lnkd.in/eyHrCn4j",
+    link: "https://akashgenesisweb.netlify.app/",
+    gitLink:"https://github.com/Akash-code-0-1/Genesis_Website",
   },
   {
     id: 4,
@@ -40,24 +42,33 @@ const webDevProjects = [
       "A modern and responsive frontend website developed for Good Chef Institute using React.js, TypeScript, Vite, Tailwind CSS, and React Router. Focused on performance, accessibility, and smooth UX.",
     tags: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "React Router"],
     video: "/cheifInstitute.mp4", 
-    link: "https://lnkd.in/dnwk5rZi",
+    link: "https://good-chef-institute-website.vercel.app/",
+    gitLink:"https://github.com/Akash-code-0-1/chef_institute",
   },
   {
     id: 5,
     title: "Personal Portfolio Website",
     description:
       "The portfolio you're currently viewing. Developed with React.js and Tailwind CSS, featuring dark mode, animations with Framer Motion, and responsive design for all screen sizes.",
-    video: "/portfolio-showcase.mp4", // Optional: replace with real video if you have
-    tags: ["React.js", "Tailwind CSS", "Framer Motion", "Portfolio", "Responsive Design"],
-    link: "https://yourportfolio.vercel.app/", // Replace with actual portfolio URL
+    video: "",
+    image:"/portfolio.PNG", 
+    tags: ["React.js", "Tailwind CSS", "Framer Motion", "Portfolio", "Responsive Design",
+      "In Development" // <- NEW
+    ],
+    link: "",
+    gitLink: "https://github.com/Akash-code-0-1/Complete-Social-Media-Web-Application", 
   },
   {
     id: 6,
     title: "Reading Table – Study Organizer App",
     description:
       "A productivity-focused web app for students to create to-do lists, track study time, set revision reminders, and upload reading materials. Built with React.js and Tailwind CSS.",
-    tags: ["React.js", "Tailwind CSS", "Student Tools", "To-Do", "Time Tracker", "File Upload"],
-    link: "#", // Replace with your actual link
+    tags: ["React.js", "Tailwind CSS", "Student Tools", "To-Do", "Time Tracker", "File Upload",
+      "In Development" // <- NEW
+    ],
+    image:"",
+    link: "",
+    gitLink:"",
   },
 ];
 
@@ -137,6 +148,7 @@ export default function WebDevTab() {
             video={project.video}
             tags={project.tags}
             link={project.link}
+            gitLink={project.gitLink}
             delay={index}
           />
         ))}

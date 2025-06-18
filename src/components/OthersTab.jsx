@@ -142,89 +142,107 @@ const Modal = ({ isOpen, onClose, children }) => {
 const courseWorks = [
   {
     id: 1,
-    title: "Advanced Data Structures & Algorithms",
-    course: "CS 5800",
+    title: "Data Structures & Algorithms",
+    course: "CSE 134,231",
     semester: "Fall 2023",
-    grade: "A",
+    grade: "A+",
     description:
       "Implemented complex algorithms including graph traversal, dynamic programming, and advanced tree structures.",
-    technologies: ["Java", "Python", "Algorithm Analysis"],
-    highlights: ["Red-Black Trees", "Dijkstra's Algorithm", "Dynamic Programming"],
+    technologies: ["C++", "Python", "Algorithm Analysis"],
+    highlights: ["Prims Algorithm", "Dijkstra's Algorithm", "Dynamic Programming"],
   },
   {
     id: 2,
-    title: "Machine Learning Systems",
-    course: "CS 6140",
-    semester: "Spring 2024",
+    title: "Data Mining and Machine Learning",
+    course: "CSE 325",
+    semester: "Fall 2024",
     grade: "A-",
-    description: "Built end-to-end ML pipelines with focus on scalability and production deployment.",
-    technologies: ["Python", "TensorFlow", "Docker", "AWS"],
-    highlights: ["Neural Networks", "Model Deployment", "MLOps"],
+    description: "Built end-to-end ML pipelines with focus on scalability.",
+    technologies: ["Python", "TensorFlow", "Colab"],
+    highlights: ["Neural Networks", "Model Analysis", "Deep Learing Algorithms"],
   },
   {
     id: 3,
-    title: "Database Design & Implementation",
-    course: "CS 5200",
-    semester: "Fall 2023",
-    grade: "A",
+    title: "Database Management System",
+    course: "CSE 312",
+    semester: "Fall 2024",
+    grade: "A+",
     description: "Designed and implemented relational databases with complex queries and optimization.",
-    technologies: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+    technologies: ["MySQL", "MongoDB"],
     highlights: ["Query Optimization", "Indexing", "ACID Properties"],
   },
+  {
+    id: 4,
+    title: "Natural Language Processing",
+    course: "CSE 445",
+    semester: "Fall 2024",
+    grade: "A+",
+    description: "Explored core NLP techniques including text preprocessing, sentiment analysis, and transformer-based models.",
+    technologies: ["Python", "NLTK", "HuggingFace Transformers"],
+    highlights: ["Text Classification", "Tokenization", "Transformer Models"],
+  },
+
+  {
+    id: 5,
+    title: "Object-Oriented Programming",
+    course: "CSE 221",
+    semester: "Spring 2024",
+    grade: "A+",
+    description: "Mastered object-oriented principles by designing modular and reusable software systems.",
+    technologies: ["C++", "Java"],
+    highlights: ["Encapsulation", "Inheritance", "Polymorphism"],
+  }
+
 ]
 
 const internships = [
   {
     id: 1,
-    company: "TechCorp Solutions",
-    position: "Software Engineering Intern",
-    duration: "Jun 2023 - Aug 2023",
-    location: "San Francisco, CA",
+    company: "GoInnovior Limited",
+    position: "Full Stack Software Development Intern",
+    duration: "November 2024 – Present",
+    location: "Mirpur DOHS, Dhaka, Bangladesh",
     description:
-      "Developed microservices for e-commerce platform serving 1M+ users. Improved API response time by 40%.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
-    achievements: ["Reduced API latency by 40%", "Implemented real-time notifications", "Mentored 2 junior interns"],
-  },
-  {
-    id: 2,
-    company: "DataFlow Analytics",
-    position: "ML Engineering Intern",
-    duration: "Jan 2024 - May 2024",
-    location: "Boston, MA",
-    description: "Built machine learning models for predictive analytics and data visualization dashboards.",
-    technologies: ["Python", "Scikit-learn", "React", "D3.js"],
-    achievements: ["Improved model accuracy by 25%", "Created interactive dashboards", "Automated data pipeline"],
+      "Contributed to the design and development of scalable web applications and business automation tools. Collaborated with cross-functional teams to deliver full-stack features and enhancements for client projects.",
+    technologies: ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Express.js"],
+    achievements: [
+      "Built and deployed dynamic web interfaces with responsive design",
+      "Integrated secure RESTful APIs for data-driven modules",
+      "Participated in workflow automation for internal tools",
+    ],
   },
 ]
 
 const certificates = [
+
   {
-    id: 1,
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "March 2024",
-    credentialId: "AWS-SAA-2024-001",
-    image: "/placeholder.svg?height=100&width=100",
-    skills: ["Cloud Architecture", "AWS Services", "Security"],
+    "id": 1,
+    "title": "Best Library User of Fall Semester 2024",
+    "issuer": "Daffodil International University Library",
+    "date": "Fall Semester 2024",
+    "credentialId": "ID. 221-15-5424",
+    "image": "/library.jpeg",
+    "skills": ["Information Literacy", "Research Skills", "Academic Engagement"]
   },
   {
-    id: 2,
-    title: "Google Cloud Professional Developer",
-    issuer: "Google Cloud",
-    date: "January 2024",
-    credentialId: "GCP-PD-2024-002",
-    image: "/placeholder.svg?height=100&width=100",
-    skills: ["GCP Services", "Kubernetes", "DevOps"],
+    "id": 2,
+    "title": "Full Stack Software Development Intern",
+    "issuer": "GoInnovior Limited",
+    "date": "November 2024 – Present",
+    "credentialId": "N/A",
+    "image": "/placeholder.svg?height=100&width=100",
+    "skills": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Express.js", "Web Development", "API Integration"]
   },
   {
-    id: 3,
-    title: "Dean's List Recognition",
-    issuer: "Northeastern University",
-    date: "Fall 2023",
-    credentialId: "NEU-DL-F23",
-    image: "/placeholder.svg?height=100&width=100",
-    skills: ["Academic Excellence", "GPA 3.8+"],
+    "id": 3,
+    "title": "Data Visionary: National Data Analytics Competition (NDAC 2025)",
+    "issuer": "Daffodil International University, Department of Computer Science and Engineering",
+    "date": "April 12, 2025",
+    "credentialId": "NDAC_T088",
+    "image": "/ndac.jpeg",
+    "skills": ["Data Analytics", "Data Visualization", "Problem Solving", "Teamwork"]
   },
+
 ]
 
 const otherProjects = [
@@ -257,83 +275,39 @@ const otherProjects = [
 const galleryItems = [
   {
     id: 1,
-    title: "Google Campus Visit",
+    title: "Kaz Software Visit",
     description:
       "Toured Google's Mountain View campus during a tech conference. Amazing work culture and innovative spaces.",
     image: "/placeholder.svg?height=400&width=600",
     category: "Company Visit",
-    location: "Mountain View, CA",
+    location: "Dhaka, Bangladesh",
     date: "March 2024",
   },
   {
     id: 2,
-    title: "Microsoft Azure Workshop",
-    description: "Attended hands-on workshop on cloud computing and AI services at Microsoft's Boston office.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "Ai-Powered Learning Processing",
+    description: "Attended hands-on workshop on NLP that helping us learning faster at Daffodil Internation University",
+    image: "/nlpworkshop.jpeg",
     category: "Workshop",
-    location: "Boston, MA",
-    date: "January 2024",
+    location: "Daffodil Internation University",
+    date: "November 2024",
   },
+
   {
     id: 3,
-    title: "Startup Hub Coworking",
-    description: "Working session at a vibrant startup hub with fellow entrepreneurs and developers.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Work Environment",
-    location: "Cambridge, MA",
-    date: "February 2024",
-  },
-  {
-    id: 4,
-    title: "AWS Re:Invent Conference",
-    description: "Networking and learning at the largest cloud computing conference with industry leaders.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Conference",
-    location: "Las Vegas, NV",
-    date: "December 2023",
-  },
-  {
-    id: 5,
-    title: "Meta Reality Labs Tour",
+    title: "weDevs Company Visit",
     description:
-      "Exclusive tour of Meta's VR/AR research facility and hands-on experience with cutting-edge technology.",
-    image: "/placeholder.svg?height=400&width=600",
+      "Exclusive tour of weDevs Company where learned how a wordpress company can shine.",
+    image: "/wedev.jpeg",
     category: "Company Visit",
-    location: "Menlo Park, CA",
-    date: "November 2023",
+    location: "Dhaka, Bangladesh",
   },
-  {
-    id: 6,
-    title: "TechCorp Office Environment",
-    description: "My daily work environment during summer internship - modern office with collaborative spaces.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Work Environment",
-    location: "San Francisco, CA",
-    date: "July 2023",
-  },
-  {
-    id: 7,
-    title: "Hackathon at MIT",
-    description: "48-hour hackathon experience with teams from around the world building innovative solutions.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Event",
-    location: "Cambridge, MA",
-    date: "October 2023",
-  },
-  {
-    id: 8,
-    title: "Apple Park Visit",
-    description:
-      "Visiting Apple's iconic headquarters and learning about their design philosophy and innovation process.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Company Visit",
-    location: "Cupertino, CA",
-    date: "September 2023",
-  },
+
+
+
 ]
 
 export default function OthersTab() {
-  const [darkMode, setDarkMode] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -344,14 +318,6 @@ export default function OthersTab() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("All")
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [darkMode])
 
   const handleInputChange = (e) => {
     setFormData({
@@ -388,7 +354,7 @@ export default function OthersTab() {
     selectedCategory === "All" ? galleryItems : galleryItems.filter((item) => item.category === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#1E1E1E] transition-colors duration-300">
+    <div className="w-full  dark:bg-[#1E1E1E] transition-colors duration-300 justify-center">
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -603,7 +569,7 @@ export default function OthersTab() {
         </motion.section>
 
         {/* Other Projects Section */}
-        <motion.section
+        {/* <motion.section
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -647,7 +613,7 @@ export default function OthersTab() {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Gallery Section */}
         <motion.section
@@ -734,66 +700,25 @@ export default function OthersTab() {
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">john.doe@example.com</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">akash15-5424@diu.edu.bd</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">+880 1852842578</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">Boston, MA</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">Dhaka, Bangladesh</span>
                 </div>
               </div>
               <p className="mt-8 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.
                 Feel free to reach out!
               </p>
-            </div>
-
-            <div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <Input
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                />
-                <Button type="submit" className="w-full text-lg py-3">
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
             </div>
           </div>
         </motion.section>

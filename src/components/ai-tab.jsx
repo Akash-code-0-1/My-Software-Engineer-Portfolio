@@ -146,6 +146,7 @@ export default function AiTab() {
           <p className="text-gray-600 dark:text-gray-400">
             Through collaborative research and open-source contributions, I aim to make AI more accessible,
             interpretable, and beneficial for diverse communities and industries.
+
           </p>
         </div>
       </motion.div>

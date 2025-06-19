@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaFileAlt, FaCode, FaExternalLinkAlt, FaQuoteRight, FaCalendar, FaUsers } from "react-icons/fa"
+import {  FaExternalLinkAlt, FaCalendar, FaUsers } from "react-icons/fa"
 
 export default function PublicationCard({ publication, index }) {
   return (

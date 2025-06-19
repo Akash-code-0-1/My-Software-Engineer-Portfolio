@@ -5,19 +5,14 @@ import {
   Mail,
   Phone,
   MapPin,
-  ExternalLink,
   Calendar,
   Award,
   GraduationCap,
   Briefcase,
-  Code,
-  Send,
   ChevronLeft,
   ChevronRight,
   Building,
   Camera,
-  Sun,
-  Moon,
   X,
 } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -93,19 +88,19 @@ const Badge = ({ children, variant = "default", className = "" }) => {
   )
 }
 
-const Input = ({ className = "", ...props }) => (
-  <input
-    className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
-    {...props}
-  />
-)
+// const Input = ({ className = "", ...props }) => (
+//   <input
+//     className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
+//     {...props}
+//   />
+// )
 
-const Textarea = ({ className = "", ...props }) => (
-  <textarea
-    className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
-    {...props}
-  />
-)
+// const Textarea = ({ className = "", ...props }) => (
+//   <textarea
+//     className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
+//     {...props}
+//   />
+// )
 
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
@@ -245,32 +240,32 @@ const certificates = [
 
 ]
 
-const otherProjects = [
-  {
-    id: 1,
-    title: "Open Source Contributions",
-    description: "Active contributor to React, Next.js, and various npm packages with 50+ merged PRs.",
-    type: "Open Source",
-    link: "https://github.com/username",
-    stats: "50+ PRs merged",
-  },
-  {
-    id: 2,
-    title: "Technical Blog",
-    description: "Writing technical articles about web development, AI, and software engineering best practices.",
-    type: "Content Creation",
-    link: "https://blog.example.com",
-    stats: "10K+ monthly readers",
-  },
-  {
-    id: 3,
-    title: "Hackathon Winner",
-    description: "1st place at MIT Hackathon 2024 for building an AI-powered accessibility tool.",
-    type: "Competition",
-    link: "#",
-    stats: "1st Place Winner",
-  },
-]
+// const otherProjects = [
+//   {
+//     id: 1,
+//     title: "Open Source Contributions",
+//     description: "Active contributor to React, Next.js, and various npm packages with 50+ merged PRs.",
+//     type: "Open Source",
+//     link: "https://github.com/username",
+//     stats: "50+ PRs merged",
+//   },
+//   {
+//     id: 2,
+//     title: "Technical Blog",
+//     description: "Writing technical articles about web development, AI, and software engineering best practices.",
+//     type: "Content Creation",
+//     link: "https://blog.example.com",
+//     stats: "10K+ monthly readers",
+//   },
+//   {
+//     id: 3,
+//     title: "Hackathon Winner",
+//     description: "1st place at MIT Hackathon 2024 for building an AI-powered accessibility tool.",
+//     type: "Competition",
+//     link: "#",
+//     stats: "1st Place Winner",
+//   },
+// ]
 
 const galleryItems = [
   {
@@ -308,29 +303,29 @@ const galleryItems = [
 ]
 
 export default function OthersTab() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // })
   const [selectedImage, setSelectedImage] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  // const handleInputChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   })
+  // }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   console.log("Form submitted:", formData)
+  //   setFormData({ name: "", email: "", subject: "", message: "" })
+  // }
 
   const openModal = (item, index) => {
     setSelectedImage(item)

@@ -5,59 +5,6 @@ import profile_pic from "../images/akash.png";
 
 const Hero_Section = () => {
 
-    // const containerRef = useRef(null);
-
-    // useEffect(() => {
-    //   const container = containerRef.current;
-    //   if (!container) return;
-
-    //   const shadowCount = 3;
-    //   const shadows = [];
-
-    //   for (let i = 0; i < shadowCount; i++) {
-    //     const shadow = document.createElement("div");
-
-    //     shadow.className = "absolute rounded-full z-0";
-    //     shadow.style.inset = `${-(8 + i * 4)}px`;
-    //     shadow.style.opacity = (0.8 - i * 0.2).toString();
-    //     shadow.style.transition = "transform 0.2s ease";
-
-    //     container.appendChild(shadow);
-    //     shadows.push(shadow);
-    //   }
-
-    //   let angle = 0;
-    //   const animate = () => {
-    //     angle = (angle + 0.5) % 360;
-
-    //     shadows.forEach((shadow, index) => {
-    //       const hue = (angle + index * 30) % 360;
-
-    //       shadow.style.backgroundColor = `hsla(${hue}, 100%, 50%, 0.7)`;
-    //       shadow.style.boxShadow = `0 0 10px 0 hsla(${hue}, 100%, 50%, 0.7)`;
-
-    //       const offsetAngle = angle + index * 15;
-    //       const offsetX = Math.cos((offsetAngle * Math.PI) / 180) * 3;
-    //       const offsetY = Math.sin((offsetAngle * Math.PI) / 180) * 3;
-
-    //       shadow.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    //     });
-    //   };
-
-    //   let animationFrameId;
-    //   const runAnimation = () => {
-    //     animate();
-    //     animationFrameId = requestAnimationFrame(runAnimation);
-    //   };
-
-    //   runAnimation();
-
-    //   return () => {
-    //     cancelAnimationFrame(animationFrameId);
-    //     shadows.forEach((shadow) => container.removeChild(shadow));
-    //   };
-    // }, []);
-
     return (
         <div id="hero-section"
             className="mt-10 bg-white dark:bg-[#1E1E1E] flex flex-col justify-between px-4 sm:px-8 md:px-16 lg:px-48">
@@ -67,20 +14,12 @@ const Hero_Section = () => {
                 <div className="flex-shrink-0">
                     <img
                         src={profile_pic}
-                        alt="Profile Picture"
+                        alt="Profile Pic"
                         className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[300px] md:w-[300px] lg:h-[300px] lg:w-[300px] xl:h-[400px] xl:w-[400px] object-cover rounded-full shadow-lg shadow-black/30 dark:shadow-white/20"
                     />
 
                 </div>
 
-                {/* <div ref={containerRef} className="flex-shrink-0 relative">
-                    
-                    <img
-                        src={profile_pic}
-                        alt="Profile Picture"
-                        className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[300px] md:w-[300px] lg:h-[300px] lg:w-[300px] xl:h-[400px] xl:w-[400px] object-cover rounded-full relative z-10"
-                    />
-                </div> */}
 
                 {/* Profile Content */}
                 <div className="text-center lg:text-left max-w-xl">

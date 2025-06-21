@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Hero_Section from "./components/Hero_Section";
 import Sidebar from "./components/Sidebar";
 import DevelopmentTab from "./components/developmentTab";
@@ -12,6 +12,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("programming");
 
+  const mainContentRef = useRef(null); // ✅ scroll ref
+
   const renderContent = () => {
     switch (activeSection) {
       case "programming":
@@ -23,7 +25,7 @@ function App() {
       case "ai":
         return <AITab />;
       case "others":
-          return <OthersTab />;
+        return <OthersTab />;
       default:
         return <div>Select a section</div>;
     }
@@ -46,6 +48,13 @@ function App() {
     localStorage.setItem("displayMode", newMode ? "dark" : "light");
   };
 
+  // ✅ scroll to top when active section changes
+  useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [activeSection]);
+
   return (
     <div className={`${darkMode ? "dark" : ""} dark:bg-[#1E1E1E]`}>
       <Navbar darkMode={darkMode} toggleDisplayMode={toggleDisplayMode} />
@@ -57,14 +66,15 @@ function App() {
           setActiveSection={setActiveSection}
         />
 
-        <main className="flex overflow-y-auto mt-[50px] lg:mt-[70px] 2xl:mt-[100px]  p-5 lg:pl-5 2xl:pl-20 bg-white dark:bg-[#1E1E1E] text-black dark:text-white w-full">
+        <main
+          ref={mainContentRef}
+          className="flex overflow-y-auto mt-[50px] lg:mt-[70px] 2xl:mt-[100px] p-5 lg:pl-5 2xl:pl-20 bg-white dark:bg-[#1E1E1E] text-black dark:text-white w-full"
+        >
           {renderContent()}
         </main>
-
       </div>
     </div>
   );
 }
 
 export default App;
-

@@ -66,6 +66,8 @@ function App() {
           setActiveSection={setActiveSection}
         />
 
+        
+
         <main
           ref={mainContentRef}
           className="flex overflow-y-auto mt-[50px] lg:mt-[70px] 2xl:mt-[100px] p-5 lg:pl-5 2xl:pl-20 bg-white dark:bg-[#1E1E1E] text-black dark:text-white w-full"

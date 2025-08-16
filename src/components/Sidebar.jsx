@@ -44,14 +44,6 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
         </span>
 
 
-        {/* <span
-          className={`ml-2 font-medium text-gray-800 whitespace-nowrap transition-all duration-300 ${
-            isHovered ? "opacity-100 max-w-[100px]" : "opacity-0 max-w-0"
-          }`}
-        >
-          {label}
-        </span> */}
-
       </div>
     </div>
   );

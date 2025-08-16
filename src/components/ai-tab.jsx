@@ -17,7 +17,7 @@ import {
 import { FaRobot, FaGraduationCap } from "react-icons/fa"
 import { Code2 } from "lucide-react"
 
-// Sample research publications data
+// research publications data
 const publications = [
   {
     id: 1,
@@ -46,7 +46,7 @@ const publications = [
 
 ]
 
-// Sample AI projects data
+// AI projects data
 const aiProjects = [
   {
     id: 1,

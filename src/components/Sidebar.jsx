@@ -16,23 +16,6 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-indigo-500 rounded-r-md" />
       )}
 
-
-      {/* <div
-        className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${isHovered
-            ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
-            : "justify-center"
-          } ${isActive ? "bg-white shadow-blue" : ""}`}
-        style={{
-          width: isHovered ? "150px" : "32px",
-          boxShadow:
-            isActive || isHovered
-              ? "0 0 15px rgba(59, 130, 246, 0.5)"
-              : "none",
-          overflow: "hidden",
-          borderLeft: isActive ? "3px solid #3B82F6" : "none",`
-        }}
-      > */}
-
       <div
         className={`flex items-center transition-all duration-300 ease-in-out rounded-md ${(isHovered || isActive)
           ? "bg-white dark:bg-[#1E1E1E] shadow-blue px-3 py-2 justify-start"
@@ -119,23 +102,6 @@ export default function Sidebar({ activeSection, setActiveSection }) {
             isActive={activeSection === "ai"}
             onClick={() => setActiveSection("ai")}
           />
-
-
-          {/* <NavItem
-            icon={
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M14 11C15.6569 11 17 9.65685 17 8C17 6.34315 15.6569 5 14 5C12.3431 5 11 6.34315 11 8C11 9.65685 12.3431 11 14 11Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M16 10L21 15" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M5 4H9C10.6569 4 12 5.34315 12 7V17C12 18.6569 10.6569 20 9 20H5V4Z" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-
-
-
-            }
-            label="Research"
-            isActive={activeSection === "research"}
-            onClick={() => setActiveSection("research")}
-          /> */}
 
 
           <NavItem

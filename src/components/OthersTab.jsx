@@ -88,19 +88,7 @@ const Badge = ({ children, variant = "default", className = "" }) => {
   )
 }
 
-// const Input = ({ className = "", ...props }) => (
-//   <input
-//     className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
-//     {...props}
-//   />
-// )
 
-// const Textarea = ({ className = "", ...props }) => (
-//   <textarea
-//     className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 ${className}`}
-//     {...props}
-//   />
-// )
 
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
@@ -240,32 +228,6 @@ const certificates = [
 
 ]
 
-// const otherProjects = [
-//   {
-//     id: 1,
-//     title: "Open Source Contributions",
-//     description: "Active contributor to React, Next.js, and various npm packages with 50+ merged PRs.",
-//     type: "Open Source",
-//     link: "https://github.com/username",
-//     stats: "50+ PRs merged",
-//   },
-//   {
-//     id: 2,
-//     title: "Technical Blog",
-//     description: "Writing technical articles about web development, AI, and software engineering best practices.",
-//     type: "Content Creation",
-//     link: "https://blog.example.com",
-//     stats: "10K+ monthly readers",
-//   },
-//   {
-//     id: 3,
-//     title: "Hackathon Winner",
-//     description: "1st place at MIT Hackathon 2024 for building an AI-powered accessibility tool.",
-//     type: "Competition",
-//     link: "#",
-//     stats: "1st Place Winner",
-//   },
-// ]
 
 const galleryItems = [
   {
@@ -303,29 +265,12 @@ const galleryItems = [
 ]
 
 export default function OthersTab() {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   subject: "",
-  //   message: "",
-  // })
+
   const [selectedImage, setSelectedImage] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("All")
 
-  // const handleInputChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   })
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   console.log("Form submitted:", formData)
-  //   setFormData({ name: "", email: "", subject: "", message: "" })
-  // }
 
   const openModal = (item, index) => {
     setSelectedImage(item)
@@ -563,52 +508,7 @@ export default function OthersTab() {
           </div>
         </motion.section>
 
-        {/* Other Projects Section */}
-        {/* <motion.section
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="flex items-center gap-3 mb-8">
-            <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-              <Code className="h-6 w-6 text-green-600 dark:text-green-400" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Other Notable Work</h2>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              >
-                <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-green-500">
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
-                        <Badge variant="outline" className="mt-2">
-                          {project.type}
-                        </Badge>
-                      </div>
-                      <Button variant="ghost" size="sm">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                    <div className="text-lg font-semibold text-green-600 dark:text-green-400">{project.stats}</div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section> */}
 
         {/* Gallery Section */}
         <motion.section

@@ -30,7 +30,7 @@ const webDevProjects = [
     title: "Genesis – Fire Safety & Security WebApp",
     description:
       "Genesis is a fully responsive web application designed to centralize fire safety and security management. Built with React.js, Tailwind CSS, and Vite, it delivers modular architecture and seamless user experience.",
-    video: "/genesis.mp4", // Optional: replace with real video if you have
+    video: "/genesis.mp4", 
     tags: ["React.js", "Vite", "Tailwind CSS", "Responsive UI"],
     link: "https://akashgenesisweb.netlify.app/",
     gitLink:"https://github.com/Akash-code-0-1/Genesis_Website",
@@ -53,7 +53,7 @@ const webDevProjects = [
     video: "",
     image:"/portfolio.PNG", 
     tags: ["React.js", "Tailwind CSS", "Framer Motion", "Portfolio", "Responsive Design",
-      "In Development" // <- NEW
+      "In Development" 
     ],
     link: "",
     gitLink: "https://github.com/Akash-code-0-1/Complete-Social-Media-Web-Application", 
@@ -64,7 +64,7 @@ const webDevProjects = [
     description:
       "A productivity-focused web app for students to create to-do lists, track study time, set revision reminders, and upload reading materials. Built with React.js and Tailwind CSS.",
     tags: ["React.js", "Tailwind CSS", "Student Tools", "To-Do", "Time Tracker", "File Upload",
-      "In Development" // <- NEW
+      "In Development" 
     ],
     image:"",
     link: "",

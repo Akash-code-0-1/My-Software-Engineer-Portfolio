@@ -27,10 +27,7 @@ export default function PublicationCard({ publication, index }) {
                 <FaCalendar className="text-xs" />
                 <span>{publication.year}</span>
               </div>
-              {/* <div className="flex items-center gap-1">
-                <FaQuoteRight className="text-xs" />
-                <span>{publication.citations} citations</span>
-              </div> */}
+
             </div>
           </div>
           <span className={`text-xs font-semibold px-2 py-1 rounded ${publication.type === "Journal" ? "bg-blue-100 text-blue-700" : "bg-gray-100 text-gray-700"}`}>
@@ -52,12 +49,7 @@ export default function PublicationCard({ publication, index }) {
         </div>
 
         <div className="flex gap-2">
-          {/* <a href={publication.pdfLink} target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 border px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
-            <FaFileAlt className="w-3 h-3" /> PDF
-          </a>
-          <a href={publication.codeLink} target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 border px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
-            <FaCode className="w-3 h-3" /> Code
-          </a> */}
+
           <a href={publication.link} target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 border px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
             <FaExternalLinkAlt className="w-3 h-3" /> View
           </a>

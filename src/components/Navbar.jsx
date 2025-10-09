@@ -22,14 +22,14 @@ const Navbar = ({ darkMode, toggleDisplayMode }) => {
 
   return (
 
-    <>
+    <>         
       {/* Development Banner */}
-      <div className="w-full bg-red-600 text-white text-center py-1 text-sm font-medium fixed top-0 z-50">
+      {/* <div className="w-full bg-red-600 text-white text-center py-1 text-sm font-medium fixed top-0 z-50">
         🚧 This portfolio is under development 🚧
-      </div>
+      </div> */}
 
       {/* Navbar - shifted down to avoid overlap */}
-      <div className="navbar fixed top-[28px] w-full h-[60px] flex justify-center items-center bg-white dark:bg-[#1e1e1e] z-40">
+     <div className="navbar fixed top-0 w-full h-[60px] flex justify-center items-center bg-white dark:bg-[#1e1e1e] z-40">
         <div className="flex justify-between w-3/4 h-[40px] items-center">
           <div className="left_secction flex items-center">
             {showProfilePic && (

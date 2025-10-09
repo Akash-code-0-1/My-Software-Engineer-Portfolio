@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -14,29 +14,39 @@ import {
   Building,
   Camera,
   X,
-} from "lucide-react"
-import { useState, useEffect } from "react"
+} from "lucide-react";
+import { useState, useEffect } from "react";
 
 // Custom Components
-const Button = ({ children, variant = "primary", size = "md", className = "", onClick, type, disabled, ...props }) => {
+const Button = ({
+  children,
+  variant = "primary",
+  size = "md",
+  className = "",
+  onClick,
+  type,
+  disabled,
+  ...props
+}) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+    "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600",
+    primary:
+      "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600",
     secondary:
       "bg-gray-200 hover:bg-gray-300 text-gray-900 focus:ring-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white",
     ghost:
       "bg-transparent hover:bg-gray-100 text-gray-700 focus:ring-gray-500 dark:hover:bg-gray-800 dark:text-gray-300",
     outline:
       "border border-gray-300 bg-transparent hover:bg-gray-50 text-gray-700 focus:ring-gray-500 dark:border-gray-600 dark:hover:bg-gray-800 dark:text-gray-300",
-  }
+  };
 
   const sizes = {
     sm: "px-3 py-1.5 text-sm rounded-md",
     md: "px-4 py-2 text-sm rounded-lg",
     lg: "px-6 py-3 text-base rounded-lg",
-  }
+  };
 
   return (
     <button
@@ -48,8 +58,8 @@ const Button = ({ children, variant = "primary", size = "md", className = "", on
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
 const Card = ({ children, className = "", onClick }) => (
   <div
@@ -58,26 +68,37 @@ const Card = ({ children, className = "", onClick }) => (
   >
     {children}
   </div>
-)
+);
 
-const CardHeader = ({ children, className = "" }) => <div className={`p-6 pb-4 ${className}`}>{children}</div>
+const CardHeader = ({ children, className = "" }) => (
+  <div className={`p-6 pb-4 ${className}`}>{children}</div>
+);
 
-const CardContent = ({ children, className = "" }) => <div className={`p-6 pt-0 ${className}`}>{children}</div>
+const CardContent = ({ children, className = "" }) => (
+  <div className={`p-6 pt-0 ${className}`}>{children}</div>
+);
 
 const CardTitle = ({ children, className = "" }) => (
-  <h3 className={`text-lg font-semibold text-gray-900 dark:text-white ${className}`}>{children}</h3>
-)
+  <h3
+    className={`text-lg font-semibold text-gray-900 dark:text-white ${className}`}
+  >
+    {children}
+  </h3>
+);
 
 const CardDescription = ({ children, className = "" }) => (
-  <p className={`text-sm text-gray-600 dark:text-gray-400 mt-1 ${className}`}>{children}</p>
-)
+  <p className={`text-sm text-gray-600 dark:text-gray-400 mt-1 ${className}`}>
+    {children}
+  </p>
+);
 
 const Badge = ({ children, variant = "default", className = "" }) => {
   const variants = {
     default: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     secondary: "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200",
-    outline: "border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300",
-  }
+    outline:
+      "border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300",
+  };
 
   return (
     <span
@@ -85,29 +106,30 @@ const Badge = ({ children, variant = "default", className = "" }) => {
     >
       {children}
     </span>
-  )
-}
-
-
+  );
+};
 
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [isOpen])
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onClick={onClose} />
+      <div
+        className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+        onClick={onClose}
+      />
       <div className="relative bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-4xl max-h-[90vh] overflow-hidden">
         <button
           onClick={onClose}
@@ -118,8 +140,8 @@ const Modal = ({ isOpen, onClose, children }) => {
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
 // Sample data
 const courseWorks = [
@@ -132,7 +154,11 @@ const courseWorks = [
     description:
       "Implemented complex algorithms including graph traversal, dynamic programming, and advanced tree structures.",
     technologies: ["C++", "Python", "Algorithm Analysis"],
-    highlights: ["Prims Algorithm", "Dijkstra's Algorithm", "Dynamic Programming"],
+    highlights: [
+      "Prims Algorithm",
+      "Dijkstra's Algorithm",
+      "Dynamic Programming",
+    ],
   },
   {
     id: 2,
@@ -142,7 +168,11 @@ const courseWorks = [
     grade: "A-",
     description: "Built end-to-end ML pipelines with focus on scalability.",
     technologies: ["Python", "TensorFlow", "Colab"],
-    highlights: ["Neural Networks", "Model Analysis", "Deep Learing Algorithms"],
+    highlights: [
+      "Neural Networks",
+      "Model Analysis",
+      "Deep Learing Algorithms",
+    ],
   },
   {
     id: 3,
@@ -150,7 +180,8 @@ const courseWorks = [
     course: "CSE 312",
     semester: "Fall 2024",
     grade: "A+",
-    description: "Designed and implemented relational databases with complex queries and optimization.",
+    description:
+      "Designed and implemented relational databases with complex queries and optimization.",
     technologies: ["MySQL", "MongoDB"],
     highlights: ["Query Optimization", "Indexing", "ACID Properties"],
   },
@@ -160,7 +191,8 @@ const courseWorks = [
     course: "CSE 445",
     semester: "Fall 2024",
     grade: "A+",
-    description: "Explored core NLP techniques including text preprocessing, sentiment analysis, and transformer-based models.",
+    description:
+      "Explored core NLP techniques including text preprocessing, sentiment analysis, and transformer-based models.",
     technologies: ["Python", "NLTK", "HuggingFace Transformers"],
     highlights: ["Text Classification", "Tokenization", "Transformer Models"],
   },
@@ -171,12 +203,12 @@ const courseWorks = [
     course: "CSE 221",
     semester: "Spring 2024",
     grade: "A+",
-    description: "Mastered object-oriented principles by designing modular and reusable software systems.",
+    description:
+      "Mastered object-oriented principles by designing modular and reusable software systems.",
     technologies: ["C++", "Java"],
     highlights: ["Encapsulation", "Inheritance", "Polymorphism"],
-  }
-
-]
+  },
+];
 
 const internships = [
   {
@@ -187,55 +219,108 @@ const internships = [
     location: "Mirpur DOHS, Dhaka, Bangladesh",
     description:
       "Contributed to the design and development of scalable web applications and business automation tools. Collaborated with cross-functional teams to deliver full-stack features and enhancements for client projects.",
-    technologies: ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Express.js"],
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Express.js",
+    ],
     achievements: [
       "Built and deployed dynamic web interfaces with responsive design",
       "Integrated secure RESTful APIs for data-driven modules",
       "Participated in workflow automation for internal tools",
     ],
   },
-]
+];
 
 const certificates = [
-
   {
-    "id": 1,
-    "title": "Best Library User of Fall Semester 2024",
-    "issuer": "Daffodil International University Library",
-    "date": "Fall Semester 2024",
-    "credentialId": "ID. 221-15-5424",
-    "image": "/library.jpeg",
-    "skills": ["Information Literacy", "Research Skills", "Academic Engagement"]
+    id: 1,
+    title: "Fout TimeBest Library User",
+    issuer: "Daffodil International University Library",
+    date: "Fall Semester 2024",
+    credentialId: "ID. 221-15-5424",
+    image: "/library.jpeg",
+    skills: ["Information Literacy", "Research Skills", "Academic Engagement"],
   },
   {
-    "id": 2,
-    "title": "Full Stack Software Development Intern",
-    "issuer": "GoInnovior Limited",
-    "date": "November 2024 – Present",
-    "credentialId": "N/A",
-    "image": "/placeholder.svg?height=100&width=100",
-    "skills": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Express.js", "Web Development", "API Integration"]
+    id: 2,
+    title: "Full Stack Software Development Intern",
+    issuer: "GoInnovior Limited",
+    date: "November 2024 – Present",
+    credentialId: "N/A",
+    image: "/placeholder.svg?height=100&width=100",
+    skills: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Express.js",
+      "Web Development",
+      "API Integration",
+    ],
   },
   {
-    "id": 3,
-    "title": "Data Visionary: National Data Analytics Competition (NDAC 2025)",
-    "issuer": "Daffodil International University, Department of Computer Science and Engineering",
-    "date": "April 12, 2025",
-    "credentialId": "NDAC_T088",
-    "image": "/ndac.jpeg",
-    "skills": ["Data Analytics", "Data Visualization", "Problem Solving", "Teamwork"]
+    id: 3,
+    title: "Data Visionary: National Data Analytics Competition (NDAC 2025)",
+    issuer:
+      "Daffodil International University, Department of Computer Science and Engineering",
+    date: "April 12, 2025",
+    credentialId: "NDAC_T088",
+    image: "/ndac.jpeg",
+    skills: [
+      "Data Analytics",
+      "Data Visualization",
+      "Problem Solving",
+      "Teamwork",
+    ],
   },
-
-]
-
+  {
+    id: 4,
+    title: "Software Development Internship",
+    issuer: "Goinnovior Limited",
+    date: "March 03, 2025 – June 03, 2025",
+    credentialId: "N/A",
+    image: "/intern.jpeg",
+    skills: [
+      "Project Documentation",
+      "Frontend Development",
+      "Backend Development",
+      "Node.js",
+      "MongoDB",
+      "Problem Solving",
+      "Communication",
+      "Team Collaboration",
+      "React",
+      "PHP",
+    ],
+  },
+  {
+    id: 5,
+    title: "Software Project Development (Virtual Training Program)",
+    issuer: "Skill Jobs",
+    date: "March 03, 2025 – June 03, 2025",
+    credentialId: "SJ/SPD-20250160051",
+    image: "/training.jpeg",
+    skills: [
+      "Software Project Development",
+      "Virtual Collaboration",
+      "Project Competency",
+      "Technical Training",
+    ],
+  },
+];
 
 const galleryItems = [
   {
     id: 1,
     title: "Kaz Software Visit",
     description:
-      "Toured Google's Mountain View campus during a tech conference. Amazing work culture and innovative spaces.",
-    image: "/placeholder.svg?height=400&width=600",
+      "Toured Kaz Software Company, exploring their innovative work culture and cutting-edge projects.",
+    image: "/kaz.jpeg",
     category: "Company Visit",
     location: "Dhaka, Bangladesh",
     date: "March 2024",
@@ -243,7 +328,8 @@ const galleryItems = [
   {
     id: 2,
     title: "Ai-Powered Learning Processing",
-    description: "Attended hands-on workshop on NLP that helping us learning faster at Daffodil Internation University",
+    description:
+      "Attended hands-on workshop on NLP that helping us learning faster at Daffodil Internation University",
     image: "/nlpworkshop.jpeg",
     category: "Workshop",
     location: "Daffodil Internation University",
@@ -255,47 +341,56 @@ const galleryItems = [
     title: "weDevs Company Visit",
     description:
       "Exclusive tour of weDevs Company where learned how a wordpress company can shine.",
-    image: "/wedev.jpeg",
+    image: "/wedevs.jpeg",
+    category: "Company Visit",
+    location: "Dhaka, Bangladesh",
+  },
+
+    {
+    id: 3,
+    title: "Brain Station 23 Company Visit",
+    description:
+      "Exclusive tour of Brain Station 23 where learned how a software company can shine.",
+    image: "/brain.jpeg",
     category: "Company Visit",
     location: "Dhaka, Bangladesh",
   },
 
 
 
-]
+];
 
 export default function OthersTab() {
-
-  const [selectedImage, setSelectedImage] = useState(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("All")
-
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const openModal = (item, index) => {
-    setSelectedImage(item)
-    setCurrentImageIndex(index)
-    setIsModalOpen(true)
-  }
+    setSelectedImage(item);
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
 
   const navigateImage = (direction) => {
     const newIndex =
       direction === "next"
         ? (currentImageIndex + 1) % galleryItems.length
         : currentImageIndex === 0
-          ? galleryItems.length - 1
-          : currentImageIndex - 1
+        ? galleryItems.length - 1
+        : currentImageIndex - 1;
 
-    setCurrentImageIndex(newIndex)
-    setSelectedImage(galleryItems[newIndex])
-  }
+    setCurrentImageIndex(newIndex);
+    setSelectedImage(galleryItems[newIndex]);
+  };
 
   const filteredGalleryItems =
-    selectedCategory === "All" ? galleryItems : galleryItems.filter((item) => item.category === selectedCategory)
+    selectedCategory === "All"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === selectedCategory);
 
   return (
     <div className="w-full  dark:bg-[#1E1E1E] transition-colors duration-300 justify-center">
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -310,10 +405,13 @@ export default function OthersTab() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Professional Journey</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Professional Journey
+          </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A comprehensive overview of my academic achievements, professional experience, certifications, and other
-            notable accomplishments in software engineering.
+            A comprehensive overview of my academic achievements, professional
+            experience, certifications, and other notable accomplishments in
+            software engineering.
           </p>
         </motion.div>
 
@@ -327,7 +425,9 @@ export default function OthersTab() {
             <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
               <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Course Works</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Course Works
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -342,7 +442,9 @@ export default function OthersTab() {
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle className="text-xl">{course.title}</CardTitle>
+                        <CardTitle className="text-xl">
+                          {course.title}
+                        </CardTitle>
                         <CardDescription className="text-base">
                           {course.course} • {course.semester}
                         </CardDescription>
@@ -353,23 +455,36 @@ export default function OthersTab() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{course.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                      {course.description}
+                    </p>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">Technologies:</h4>
+                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">
+                          Technologies:
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {course.technologies.map((tech) => (
-                            <Badge key={tech} variant="outline" className="text-sm py-1">
+                            <Badge
+                              key={tech}
+                              variant="outline"
+                              className="text-sm py-1"
+                            >
                               {tech}
                             </Badge>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">Key Highlights:</h4>
+                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">
+                          Key Highlights:
+                        </h4>
                         <ul className="space-y-2">
                           {course.highlights.map((highlight, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                            <li
+                              key={idx}
+                              className="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                            >
                               <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0" />
                               {highlight}
                             </li>
@@ -394,7 +509,9 @@ export default function OthersTab() {
             <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
               <Briefcase className="h-6 w-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Internship Experience</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Internship Experience
+            </h2>
           </div>
 
           <div className="space-y-8">
@@ -409,8 +526,10 @@ export default function OthersTab() {
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                       <div>
-                        <CardTitle className="text-2xl">{internship.position}</CardTitle>
-                        <CardDescription className="text-xl font-semibold text-purple-600 dark:text-purple-400">
+                        <CardTitle className="text-2xl">
+                          {internship.position}
+                        </CardTitle>
+                        <CardDescription className="text-xl font-semibold text-green-600 dark:text-purple-400">
                           {internship.company}
                         </CardDescription>
                         <div className="flex items-center gap-6 mt-3 text-gray-600 dark:text-gray-300">
@@ -432,20 +551,31 @@ export default function OthersTab() {
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">Technologies Used:</h4>
+                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">
+                          Technologies Used:
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {internship.technologies.map((tech) => (
-                            <Badge key={tech} variant="outline" className="text-sm py-1">
+                            <Badge
+                              key={tech}
+                              variant="outline"
+                              className="text-sm py-1"
+                            >
                               {tech}
                             </Badge>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">Key Achievements:</h4>
+                        <h4 className="font-semibold mb-3 text-gray-900 dark:text-white">
+                          Key Achievements:
+                        </h4>
                         <ul className="space-y-2">
                           {internship.achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                            <li
+                              key={idx}
+                              className="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                            >
                               <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0" />
                               {achievement}
                             </li>
@@ -470,45 +600,52 @@ export default function OthersTab() {
             <div className="p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
               <Award className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Certificates & Achievements</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Certificates & Achievements
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Certificate Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {certificates.map((cert, index) => (
               <motion.div
                 key={cert.id}
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               >
-                <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-yellow-500">
-                  <CardHeader>
-                    <div className="mx-auto mb-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-full w-20 h-20 flex items-center justify-center">
-                      <img src={cert.image || "/placeholder.svg"} alt={cert.title} className="w-12 h-12 rounded-lg" />
+                <div className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700">
+                  {/* Certificate Image */}
+                  <img
+                    src={cert.image || "/placeholder.svg"}
+                    alt={cert.title}
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Overlay Info */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center text-white px-4">
+                    <h3 className="text-xl font-semibold mb-1">{cert.title}</h3>
+                    <p className="text-sm mb-2">{cert.issuer}</p>
+                    <p className="text-xs">Issued: {cert.date}</p>
+                    <p className="text-xs">ID: {cert.credentialId}</p>
+
+                    {/* Skills badges */}
+                    <div className="flex flex-wrap gap-2 mt-3 justify-center">
+                      {cert.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
-                    <CardTitle className="text-xl">{cert.title}</CardTitle>
-                    <CardDescription className="text-base">{cert.issuer}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div className="text-gray-600 dark:text-gray-300">Issued: {cert.date}</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">ID: {cert.credentialId}</div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {cert.skills.map((skill) => (
-                          <Badge key={skill} variant="secondary" className="text-sm">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </motion.section>
-
-
 
         {/* Gallery Section */}
         <motion.section
@@ -520,17 +657,27 @@ export default function OthersTab() {
             <div className="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg">
               <Camera className="h-6 w-6 text-orange-600 dark:text-orange-400" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Professional Gallery</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Professional Gallery
+            </h2>
           </div>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-4xl leading-relaxed">
-            A visual journey through my professional experiences - from company visits and conferences to collaborative
-            work environments and industry events.
+            A visual journey through my professional experiences - from company
+            visits and conferences to collaborative work environments and
+            industry events.
           </p>
 
           {/* Category Filter */}
           <div className="mb-8 flex flex-wrap gap-3 justify-center">
-            {["All", "Company Visit", "Workshop", "Conference", "Work Environment", "Event"].map((category) => (
+            {[
+              "All",
+              "Company Visit",
+              "Workshop",
+              "Conference",
+              "Work Environment",
+              "Event",
+            ].map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "primary" : "outline"}
@@ -563,8 +710,12 @@ export default function OthersTab() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <Badge className="mb-2 bg-white/20 text-white border-white/30">{item.category}</Badge>
-                      <h3 className="font-semibold text-lg line-clamp-2">{item.title}</h3>
+                      <Badge className="mb-2 bg-white/20 text-white border-white/30">
+                        {item.category}
+                      </Badge>
+                      <h3 className="font-semibold text-lg line-clamp-2">
+                        {item.title}
+                      </h3>
                     </div>
                   </div>
                 </Card>
@@ -584,35 +735,45 @@ export default function OthersTab() {
             <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
               <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Get In Touch</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Get In Touch
+            </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
+                Contact Information
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">akash15-5424@diu.edu.bd</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">
+                    akash15-5424@diu.edu.bd
+                  </span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">+880 1852842578</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">
+                    +880 1852842578
+                  </span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-300">Dhaka, Bangladesh</span>
+                  <span className="text-lg text-gray-700 dark:text-gray-300">
+                    Dhaka, Bangladesh
+                  </span>
                 </div>
               </div>
               <p className="mt-8 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.
-                Feel free to reach out!
+                I'm always open to discussing new opportunities, collaborations,
+                or just having a chat about technology. Feel free to reach out!
               </p>
             </div>
           </div>
@@ -662,7 +823,9 @@ export default function OthersTab() {
                   <Badge variant="outline" className="mb-3 text-sm">
                     {selectedImage.category}
                   </Badge>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{selectedImage.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {selectedImage.title}
+                  </h3>
                 </div>
               </div>
 
@@ -685,5 +848,5 @@ export default function OthersTab() {
         )}
       </Modal>
     </div>
-  )
+  );
 }

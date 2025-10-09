@@ -104,7 +104,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
               </svg>
 
             }
-            label="Others"
+            label="Experience"
             isActive={activeSection === "others"}
             onClick={() => setActiveSection("others")}
           />
@@ -180,7 +180,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
             </svg>
 
           }
-          label="Others"
+          label="Experience"
           isActive={activeSection === "others"}
           onClick={() => setActiveSection("others")}
         />

@@ -1,5 +1,5 @@
 import React from "react";
-import profile_pic from "../images/akash.png";
+import profile_pic from "../images/profile.jpg";
 // import { useEffect, useRef } from "react"
 
 

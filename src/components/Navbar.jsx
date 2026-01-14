@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import darkmode from "../images/moon.png";
 import lightmode from "../images/sun.png";
-import profile_pic from "../images/akash.png"; 
+import profile_pic_logo from "../images/logo.jpg"; 
 
 const Navbar = ({ darkMode, toggleDisplayMode }) => {
   const [showProfilePic, setShowProfilePic] = useState(false);
@@ -34,9 +34,9 @@ const Navbar = ({ darkMode, toggleDisplayMode }) => {
           <div className="left_secction flex items-center">
             {showProfilePic && (
               <img
-                src={profile_pic}
+                src={profile_pic_logo}
                 alt="Profile"
-                className="h-[40px] w-[40px] rounded-full mr-2"
+                className="h-[40px] w-[40px] rounded-full mr-2 object-cover"
               />
             )}
             <h1 className="text-[20px] font-spaceGrotesk font-bold text-black dark:text-white">

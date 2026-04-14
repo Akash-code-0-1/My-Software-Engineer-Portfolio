@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
 import ProjectCard from "./project-card";
-import { FaPython, FaJava } from "react-icons/fa";
-import { SiC, SiCplusplus } from "react-icons/si";
-
+import { FaPython } from "react-icons/fa";
+import { SiCplusplus } from "react-icons/si";
 
 const programmingProjects = [
   {
@@ -27,200 +26,190 @@ const programmingProjects = [
     link: "https://graphalgorithmvisualizer.vercel.app/",
     gitLink: "https://github.com/Akash-code-0-1/Graph-Algorithms-Visualization",
   },
-  // {
-  //   id: 3,
-  //   title: "Code Execution Visualizer",
-  //   description:
-  //     "A code execution visualizer that simulates line-by-line code behavior with animations and real-world analogies, designed for beginners to understand how code flows.",
-  //   video: "/code-visualizer.mp4",
-  //   tags: [
-  //   "React",
-  //   "Tailwind",
-  //   "JavaScript",
-  //   "Education",
-  //   "In Development" // <- NEW
-  // ],
-  //   link: "https://sortingvisualizer-six.vercel.app/",
-  //   gitLink: "https://github.com/Akash-code-0-1/SortViz",
-  // },
-
   {
     id: 4,
     title: "Bus Ticket Management System",
-    description: "A terminal-based bus ticket management system built using C++. It allows users to book, cancel, and view tickets with route and seat management.",
+    description:
+      "A terminal-based bus ticket management system built using C++. It allows users to book, cancel, and view tickets with route and seat management.",
     video: "/busTicket.mp4",
-    tags: ["C++", "OOP", "File Handling","Linked List","stack"],
+    tags: ["C++", "OOP", "File Handling", "Linked List", "stack"],
     link: "",
-    gitLink: "https://github.com/Akash-code-0-1/Bus-Ticket-Management-C-"
+    gitLink: "https://github.com/Akash-code-0-1/Bus-Ticket-Management-C-",
   },
   {
     id: 5,
     title: "Student Activity Planner",
-    description: "A simple terminal-based student activity planner developed in C. It helps students manage their daily tasks, assignments, and schedules efficiently.",
+    description:
+      "A simple terminal-based student activity planner developed in C. It helps students manage their daily tasks, assignments, and schedules efficiently.",
     video: "/activityPlanner.mp4",
     tags: ["C", "Struct", "File Handling"],
     link: "",
-    gitLink: "https://github.com/Akash-code-0-1/Student-Activity-Planner-C-"
-  }
+    gitLink: "https://github.com/Akash-code-0-1/Student-Activity-Planner-C-",
+  },
 ];
 
 const languages = [
   {
-    name: "C",
-    icon: SiC,
-    color: "text-blue-600", // Blue
-  },
-  {
     name: "C++",
     icon: SiCplusplus,
-    color: "text-indigo-600", // Indigo
+    color: "text-indigo-600 dark:text-indigo-400",
   },
-  {
-    name: "Python",
-    icon: FaPython,
-    color: "text-yellow-500", // Yellow (top), blue (bottom)
-  },
-  {
-    name: "Java",
-    icon: FaJava,
-    color: "text-red-600", // Red
-  },
+  { name: "Python", icon: FaPython, color: "text-yellow-500" },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export default function ProgrammingTab() {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-      <motion.div
-        className="mb-8"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+      <motion.section
+        className="py-8 lg:px-0"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
-        <section className="py-10 lg:px-0">
-
-          <h1 className="text-center lg:text-left text-3xl font-bold text-gray-900 dark:text-white mb-7">
+        <motion.div variants={itemVariants}>
+          <h1 className="text-center lg:text-left text-3xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
             Programming
           </h1>
-
-          <p className="text-gray-600 dark:text-gray-300 lg:text-[18px] max-w-3xl text-center lg:text-left mb-6">
-            Programming is more than a skill—it's a passion. I actively solve real-world problems through code and continually sharpen my skills on platforms like LeetCode, GitHub, and Codeforces. This section reflects my growth as a software engineer, showcasing consistency, problem-solving abilities, and a strong commitment to clean, efficient code.
+          <p className="text-gray-500 dark:text-gray-400 lg:text-[17px] max-w-3xl text-center lg:text-left mb-8 leading-relaxed">
+            Programming is more than a skill—it's a passion. I actively solve
+            real-world problems through code and continually sharpen my skills
+            on platforms like LeetCode, GitHub, and Codeforces.
           </p>
+        </motion.div>
 
-          {/* Animated Colorful Icons */}
-          <motion.div
-            className="flex justify-center lg:justify-start gap-10 flex-wrap mt-8 mb-8"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
-          >
-            {languages.map((lang, index) => {
-              const Icon = lang.icon;
-              return (
-                <motion.div
-                  key={lang.name}
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.6, y: 20 },
-                    visible: { opacity: 1, scale: 1, y: 0 },
-                  }}
-                  whileHover={{ scale: 1.15, rotate: 3 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="flex flex-col items-center group"
-                >
-                  <Icon
-                    size={50}
-                    className={`${lang.color} transition-transform duration-300`}
-                  />
-                  <span className="text-sm mt-2 text-gray-700 dark:text-gray-200 font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                    {lang.name}
-                  </span>
+        {/* Language icons */}
+        <motion.div
+          className="flex justify-center lg:justify-start gap-8 flex-wrap mb-10"
+          variants={containerVariants}
+        >
+          {languages.map((lang) => {
+            const Icon = lang.icon;
+            return (
+              <motion.div
+                key={lang.name}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    transition: { type: "spring", stiffness: 300, damping: 18 },
+                  },
+                }}
+                whileHover={{ scale: 1.2, y: -6 }}
+                className="flex flex-col items-center group cursor-default"
+              >
+                <motion.div className="relative p-3 rounded-2xl bg-gray-50 dark:bg-gray-800/60 group-hover:bg-orange-50 dark:group-hover:bg-orange-900/20 transition-colors duration-300 shadow-sm group-hover:shadow-md">
+                  <Icon size={36} className={lang.color} />
                 </motion.div>
-              );
-            })}
+                <span className="text-xs mt-2 text-gray-600 dark:text-gray-400 font-semibold group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
+                  {lang.name}
+                </span>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Profile cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-12"
+          variants={containerVariants}
+        >
+          {/* LeetCode */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ y: -4, scale: 1.01 }}
+            className="flex items-center gap-4 bg-white dark:bg-[#242424] border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg rounded-2xl p-4 transition-shadow duration-300 group"
+          >
+            <div className="relative">
+              <img
+                src="https://assets.leetcode.com/users/TanvirAhmedAkash/avatar_1729030317.png"
+                alt="LeetCode Profile"
+                className="w-14 h-14 rounded-xl border-2 border-yellow-400 object-cover"
+              />
+              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center text-[8px] font-bold text-black">
+                LC
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-bold text-gray-800 dark:text-white group-hover:text-orange-500 transition-colors">
+                LeetCode
+              </h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 leading-tight">
+                Problem solving & coding progress
+              </p>
+              <a
+                href="https://leetcode.com/u/TanvirAhmedAkash/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-600 dark:text-yellow-400 text-xs font-semibold hover:underline inline-flex items-center gap-1"
+              >
+                View Profile →
+              </a>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* LeetCode Profile */}
-            <div className="flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-4">
+          {/* GitHub */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ y: -4, scale: 1.01 }}
+            className="flex items-center gap-4 bg-white dark:bg-[#242424] border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg rounded-2xl p-4 transition-shadow duration-300 group"
+          >
+            <div className="relative">
               <img
-                src="https://assets.leetcode.com/users/TanvirAhmedAkash/avatar_1729030317.png" // Replace with your LeetCode avatar URL
-                alt="LeetCode Profile"
-                className="w-16 h-16 rounded-full border-2 border-yellow-500"
-              />
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">LeetCode</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Explore my coding journey and problem-solving progress.</p>
-                <a
-                  href="https://leetcode.com/u/TanvirAhmedAkash/" // Replace with your LeetCode profile URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-600 dark:text-yellow-400 text-sm font-medium hover:underline"
-                >
-                  View Profile →
-                </a>
-              </div>
-            </div>
-
-            {/* GitHub Profile */}
-            <div className="flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-4">
-              <img
-                src="https://avatars.githubusercontent.com/u/139063114?v=4" // GitHub auto-provides profile images
+                src="https://avatars.githubusercontent.com/u/139063114?v=4"
                 alt="GitHub Profile"
-                className="w-16 h-16 rounded-full border-2 border-gray-500"
+                className="w-14 h-14 rounded-xl border-2 border-gray-400 object-cover"
               />
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">GitHub</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Dive into my projects, contributions, and open-source work.</p>
-                <a
-                  href="https://github.com/Akash-code-0-1" // Replace with your GitHub profile URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-300 text-sm font-medium hover:underline"
-                >
-                  View Profile →
-                </a>
+              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center text-[8px] font-bold text-white">
+                GH
               </div>
             </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-bold text-gray-800 dark:text-white group-hover:text-orange-500 transition-colors">
+                GitHub
+              </h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 leading-tight">
+                Projects, contributions & open-source
+              </p>
+              <a
+                href="https://github.com/Akash-code-0-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 dark:text-gray-300 text-xs font-semibold hover:underline inline-flex items-center gap-1"
+              >
+                View Profile →
+              </a>
+            </div>
+          </motion.div>
+        </motion.div>
 
-            {/* Codeforces Profile */}
-            {/* <div className="flex items-center gap-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-4">
-              <img
-                src="https://userpic.codeforces.org/3569247/title/bddbc81da28fd039.jpg" // Replace with your Codeforces avatar
-                alt="Codeforces Profile"
-                className="w-16 h-16 rounded-full border-2 border-blue-500"
-              />
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Codeforces</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Competitive programming, contests, and algorithmic thinking.</p>
-                <a
-                  href="https://codeforces.com/profile/tanvir_ah" // Replace with your Codeforces profile URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
-                >
-                  View Profile →
-                </a>
-              </div>
-            </div> */}
-
-            
-          </div>
-        </section>
-
-        <h1 className="text-center lg:text-left text-3xl font-bold text-gray-900 dark:text-white mb-6">
+        <motion.h2
+          variants={itemVariants}
+          className="text-center lg:text-left text-2xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight"
+        >
           Projects
-        </h1>
-
-
-      </motion.div>
-
-
+        </motion.h2>
+      </motion.section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {programmingProjects.map((project, index) => (
@@ -233,10 +222,10 @@ export default function ProgrammingTab() {
             tags={project.tags}
             link={project.link}
             gitLink={project.gitLink}
-            delay={index}
+            index={index}
           />
         ))}
       </div>
     </motion.div>
-  )
+  );
 }

@@ -4,7 +4,6 @@ import Hero_Section from "./components/Hero_Section";
 import Sidebar from "./components/Sidebar";
 import DevelopmentTab from "./components/developmentTab";
 import ProgrammingTab from "./components/ProgrammingTab";
-import ResearchTab from "./components/ResearchTab";
 import AITab from "./components/ai-tab";
 import OthersTab from "./components/OthersTab";
 
@@ -12,7 +11,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("programming");
 
-  const mainContentRef = useRef(null); // ✅ scroll ref
+  const mainContentRef = useRef(null);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -20,8 +19,6 @@ function App() {
         return <ProgrammingTab />;
       case "development":
         return <DevelopmentTab />;
-      case "research":
-        return <ResearchTab />;
       case "ai":
         return <AITab />;
       case "others":
@@ -48,7 +45,6 @@ function App() {
     localStorage.setItem("displayMode", newMode ? "dark" : "light");
   };
 
-  // ✅ scroll to top when active section changes
   useEffect(() => {
     if (mainContentRef.current) {
       mainContentRef.current.scrollTo({ top: 0, behavior: "smooth" });

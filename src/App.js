@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import { useState, useEffect, useRef } from "react";
-import Hero_Section from "./components/Hero_Section";
+import HeroSection from "./components/HeroSection";
 import Sidebar from "./components/Sidebar";
 import DevelopmentTab from "./components/developmentTab";
 import ProgrammingTab from "./components/ProgrammingTab";
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className={`${darkMode ? "dark" : ""} dark:bg-[#1E1E1E]`}>
       <Navbar darkMode={darkMode} toggleDisplayMode={toggleDisplayMode} />
-      <Hero_Section />
+      <HeroSection />
 
       <div className="flex h-[calc(100vh)] bg-white dark:bg-[#1E1E1E]">
         <Sidebar

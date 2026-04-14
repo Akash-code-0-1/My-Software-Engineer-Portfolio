@@ -68,7 +68,7 @@ const FloatingDot = ({ x, y, delay, size = 4 }) => (
   />
 );
 
-const Hero_Section = () => {
+const HeroSection = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -268,4 +268,4 @@ const Hero_Section = () => {
   );
 };
 
-export default Hero_Section;
+export default HeroSection;

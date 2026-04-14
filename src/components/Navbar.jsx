@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import darkmode from "../images/moon.png";
 import lightmode from "../images/sun.png";
-import profile_pic_logo from "../images/logo.jpg";
+import profile_pic_logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = ({ darkMode, toggleDisplayMode }) => {

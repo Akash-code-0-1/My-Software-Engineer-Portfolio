@@ -8,7 +8,7 @@ import AITab from "./components/ai-tab";
 import OthersTab from "./components/OthersTab";
 
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Mail,
   Phone,

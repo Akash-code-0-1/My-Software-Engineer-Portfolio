@@ -107,7 +107,7 @@ function App() {
                 {[
                   {
                     Icon: Mail,
-                    text: "akash15-5424@diu.edu.bd",
+                    text: "mdtanvirahmedakash.1@gmail.com",
                     color: "text-blue-500",
                   },
                   {

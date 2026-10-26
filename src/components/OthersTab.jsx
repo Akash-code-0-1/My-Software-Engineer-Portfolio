@@ -2,8 +2,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Mail,
-  Phone,
   MapPin,
   Calendar,
   Award,

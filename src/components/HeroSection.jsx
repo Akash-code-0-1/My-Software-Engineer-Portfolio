@@ -7,9 +7,8 @@ import {
 import profile_pic from "../images/profile.jpg";
 
 const roles = [
-  "Software Engineer",
   "Full-Stack Developer",
-  "Backend Developer",
+  "Core Backend Developer",
 ];
 
 const TypewriterText = () => {

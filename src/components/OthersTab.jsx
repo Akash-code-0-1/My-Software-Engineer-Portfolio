@@ -163,42 +163,117 @@ const courseWorks = [
 const internships = [
   {
     id: 1,
-    company: "Beup In-Tech",
-    companyFull: "Beup In-Tech (A Concern of Betopia Group)",
-    position: "Full Stack Software Developer",
+    company: "Code & Get",
+    companyFull: "Code & Get",
+    position: "Full Stack Developer",
     roles: ["Core Backend Developer", "Frontend Developer"],
-    duration: "February 1, 2025 – Present",
-    location: "Dhaka, Bangladesh",
+    duration: "Present",
+    location: "Bangladesh",
     type: "Full-time",
     current: true,
     description:
-      "Working as a core backend developer alongside frontend responsibilities at Beup In-Tech, a dynamic tech concern under Betopia Group. Contributing to building scalable systems and digital products used in production environments.",
+      "Working as a Full Stack Developer with a strong focus on backend engineering, building scalable web applications, multi-vendor e-commerce platforms, and reliable APIs. Contributing to production-ready systems, backend architecture, and deployment workflows.",
     technologies: [
+      "React",
       "Next.js",
       "Node.js",
+      "NestJS",
       "Express.js",
-      "MongoDB",
-      "NestJs",
-      "Prisma",
       "PostgreSQL",
-      "Postman",
+      "MySQL",
+      "MongoDB",
+      "Prisma",
+      "REST APIs",
       "Database Design",
       "System Design",
-      "Backend Engineering",
+      "Docker",
+      "CI/CD",
       "DevOps",
     ],
     achievements: [
-      "Designed and implemented core backend APIs and database architecture",
-      "Built responsive frontend interfaces integrated with backend services",
-      "Contributed to product development lifecycle from design to deployment",
-      "Collaborated with cross-functional teams in an agile environment",
+      "Built and scaled multi-vendor e-commerce platforms and MVP applications",
+      "Designed and developed scalable backend APIs and database architectures",
+      "Managed VPS deployments and DevOps pipelines to improve application reliability",
+      "Developed full-stack features and integrated frontend interfaces with backend services",
+    ],
+    accent: "from-blue-500 to-cyan-500",
+    accentBorder: "border-blue-500",
+    badgeColor: "blue",
+  },
+  {
+    id: 2,
+    company: "Beup In-Tech",
+    companyFull: "Beup In-Tech (A Concern of Betopia Group)",
+    position: "Full Stack Developer",
+    roles: ["Core Backend Developer", "Frontend Developer"],
+    duration: "February 2026 – April 2026",
+    location: "Dhaka, Bangladesh",
+    type: "Full-time",
+    current: false,
+    description:
+      "Contributed to the development of scalable SaaS applications and production-ready digital products, focusing on backend engineering, API development, database architecture, and frontend integration.",
+    technologies: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "REST APIs",
+      "Database Design",
+      "System Design",
+      "Docker",
+      "Git",
+    ],
+    achievements: [
+      "Developed scalable SaaS applications using Node.js, NestJS, Prisma, and PostgreSQL",
+      "Designed modular backend architectures and production-ready APIs",
+      "Integrated frontend applications with backend services",
+      "Contributed to application development and delivery in a collaborative environment",
     ],
     accent: "from-orange-500 to-amber-500",
     accentBorder: "border-orange-500",
     badgeColor: "orange",
   },
   {
-    id: 2,
+  id: 3,
+  company: "Freelance",
+  companyFull: "Freelance Software Development",
+  position: "Full Stack Developer",
+  roles: ["Full Stack Developer", "Backend Developer", "Team Collaborator"],
+  duration: "2023 – 2025",
+  location: "Remote",
+  type: "Freelance",
+  current: false,
+  description:
+    "Worked for two years as a freelance Full Stack Developer, collaborating with a development team to build scalable web applications, backend systems, APIs, and client-focused digital products for international clients.",
+  technologies: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "NestJS",
+    "PostgreSQL",
+    "MongoDB",
+    "REST APIs",
+    "Git",
+    "Docker",
+    "Tailwind CSS",
+  ],
+  achievements: [
+    "Collaborated with a development team to deliver end-to-end full-stack applications",
+    "Developed responsive frontend interfaces and integrated backend APIs",
+    "Designed database schemas and implemented server-side business logic",
+    "Integrated third-party APIs and developed custom features based on client requirements",
+    "Participated in code reviews, debugging, testing, and application deployment",
+  ],
+  accent: "from-emerald-500 to-teal-500",
+  accentBorder: "border-emerald-500",
+  badgeColor: "emerald",
+},
+  {
+    id: 4,
     company: "GoInnovior Limited",
     companyFull: "GoInnovior Limited",
     position: "Full Stack Software Development Intern",
@@ -208,7 +283,7 @@ const internships = [
     type: "Internship",
     current: false,
     description:
-      "Contributed to the design and development of scalable web applications and business automation tools. Collaborated with cross-functional teams to deliver full-stack features and enhancements for client projects.",
+      "Contributed to the development of scalable web applications and business automation tools, collaborating with cross-functional teams to deliver full-stack features and client-focused solutions.",
     technologies: [
       "React",
       "Next.js",
@@ -218,9 +293,9 @@ const internships = [
       "Express.js",
     ],
     achievements: [
-      "Built and deployed dynamic web interfaces with responsive design",
-      "Integrated secure RESTful APIs for data-driven modules",
-      "Participated in workflow automation for internal tools",
+      "Built responsive web interfaces and dynamic application features",
+      "Integrated REST APIs for data-driven application modules",
+      "Contributed to workflow automation and internal business tools",
     ],
     accent: "from-purple-500 to-violet-500",
     accentBorder: "border-purple-500",
@@ -805,7 +880,7 @@ export default function OthersTab() {
         </motion.section>
 
         {/* ── Contact ── */}
-        <motion.section
+        {/* <motion.section
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -863,7 +938,7 @@ export default function OthersTab() {
               </div>
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
       </motion.div>
 
       {/* ── Gallery Modal ── */}

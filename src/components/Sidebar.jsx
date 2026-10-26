@@ -29,11 +29,10 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
 
       <motion.div
         layout
-        className={`flex items-center rounded-xl overflow-hidden transition-colors duration-200 ${
-          expanded
-            ? "bg-white dark:bg-[#2a2a2a] shadow-md px-3 py-2"
-            : "justify-center py-2"
-        } ${isActive ? "border-l-2 border-orange-500" : ""}`}
+        className={`flex items-center rounded-xl overflow-hidden transition-colors duration-200 ${expanded
+          ? "bg-white dark:bg-[#2a2a2a] shadow-md px-3 py-2"
+          : "justify-center py-2"
+          } ${isActive ? "border-l-2 border-orange-500" : ""}`}
         animate={{
           width: expanded ? 148 : 38,
           boxShadow: expanded
@@ -74,28 +73,6 @@ const NavItem = ({ icon, label, isActive, onClick }) => {
 
 const navItems = [
   {
-    key: "programming",
-    label: "Programming",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M8 6L4 12L8 18"
-          stroke="#F97316"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 6L20 12L16 18"
-          stroke="#F97316"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
     key: "development",
     label: "Development",
     icon: (
@@ -132,6 +109,23 @@ const navItems = [
       </svg>
     ),
   },
+
+  {
+    key: "others",
+    label: "Experience",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M4 4H8V6C8 7.65685 9.34315 9 11 9H13C14.6569 9 16 10.3431 16 12V14H20V20H4V4Z"
+          stroke="#F97316"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+
   {
     key: "ai",
     label: "AI",
@@ -158,21 +152,30 @@ const navItems = [
       </svg>
     ),
   },
+
   {
-    key: "others",
-    label: "Experience",
+    key: "programming",
+    label: "Programming",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path
-          d="M4 4H8V6C8 7.65685 9.34315 9 11 9H13C14.6569 9 16 10.3431 16 12V14H20V20H4V4Z"
+          d="M8 6L4 12L8 18"
           stroke="#F97316"
-          strokeWidth="2"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M16 6L20 12L16 18"
+          stroke="#F97316"
+          strokeWidth="2.2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
     ),
   },
+
 ];
 
 export default function Sidebar({ activeSection, setActiveSection }) {

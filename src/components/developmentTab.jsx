@@ -15,12 +15,46 @@ import {
   SiRedis,
   SiSocketdotio,
   SiPostman,
+  SiReactquery,
 } from "react-icons/si";
+
+import { FaServer } from "react-icons/fa";
 
 const webDevProjects = [
   // ✅ unchanged (your projects stay exactly same)
+
   {
     id: 1,
+    title: "Creass Mart – Full-Stack eCommerce Platform",
+    description:
+      "Developed a fully dynamic eCommerce platform with a powerful admin dashboard, multi-role access control, and centralized website management. Features product-wise management, unlimited landing page creation, SEO optimization, third-party API integrations, and dynamic content management. Built with Next.js, React, TypeScript, and modern state management tools to deliver a scalable, responsive shopping experience.",
+    tags: [
+      "Next.js",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Zustand",
+      "Full-Stack Development",
+      "eCommerce",
+      "Admin Dashboard",
+      "RBAC",
+      "Dynamic CMS",
+      "Landing Page Builder",
+      "SEO Optimization",
+      "REST API Integration",
+      "Third-Party API Integration",
+    ],
+    video: "/creass.mp4",
+    image: "",
+    link: "https://creassmart.com/",
+    gitLink:
+      "",
+    backendGitLink:
+      "",
+  },
+  {
+    id: 2,
     title: "Full-Stack Social Media WebApp",
     description:
       "A feature-rich full-stack social media application developed using MySQL, Node.js, HTML, CSS, JavaScript, and React.js. It includes user authentication, post sharing, likes, comments, and responsive design.",
@@ -37,8 +71,44 @@ const webDevProjects = [
     gitLink:
       "https://github.com/Akash-code-0-1/Complete-Social-Media-Web-Application",
   },
+    {
+  id: 3,
+  title: "Multi-Tenant SaaS Backend – NestJS & Prisma",
+  description:
+    "A multi-tenant SaaS backend built with NestJS, Prisma ORM, PostgreSQL, Neon, and Docker. Focused on scalable backend architecture, tenant-aware data management, REST API development, and database integration to support SaaS applications serving multiple organizations.",
+  tags: [
+    "NestJS",
+    "Node.js",
+    "TypeScript",
+    "Prisma ORM",
+    "PostgreSQL",
+    "Neon",
+    "Docker",
+    "Backend Development",
+    "Multi-Tenant Architecture",
+    "SaaS",
+    "REST API",
+    "Database Design",
+  ],
+  video: "",
+  image: "/salon.png",
+  link: "",
+  gitLink:
+    "https://github.com/Akash-code-0-1/Multi-tenant-SaaS-Backend-NestJS-Prisma-PostgreSQL-Neon-Docker",
+},
+
   {
-    id: 2,
+    id: 4,
+    title: "Genesis – Fire Safety & Security WebApp",
+    description:
+      "Genesis is a fully responsive web application designed to centralize fire safety and security management. Built with React.js, Tailwind CSS, and Vite, it delivers modular architecture and seamless user experience.",
+    video: "/genesis.mp4",
+    tags: ["React.js", "Vite", "Tailwind CSS", "Responsive UI"],
+    link: "https://akashgenesisweb.netlify.app/",
+    gitLink: "https://github.com/Akash-code-0-1/Genesis_Website",
+  },
+    {
+    id: 5,
     title: "HandsOn – Social Work Platform",
     description:
       "HandsOn is a community-driven platform for organizing and joining social work initiatives. Built with Next.js and Tailwind CSS, it features modern UI components, real-time data display, and responsive layouts.",
@@ -48,17 +118,7 @@ const webDevProjects = [
       "https://github.com/Akash-code-0-1/HandsON-Community-Volunteers-WebApplication",
   },
   {
-    id: 3,
-    title: "Genesis – Fire Safety & Security WebApp",
-    description:
-      "Genesis is a fully responsive web application designed to centralize fire safety and security management. Built with React.js, Tailwind CSS, and Vite, it delivers modular architecture and seamless user experience.",
-    video: "/genesis.mp4",
-    tags: ["React.js", "Vite", "Tailwind CSS", "Responsive UI"],
-    link: "https://akashgenesisweb.netlify.app/",
-    gitLink: "https://github.com/Akash-code-0-1/Genesis_Website",
-  },
-  {
-    id: 4,
+    id: 6,
     title: "Good Chef Institute – Frontend Website",
     description:
       "A modern and responsive frontend website developed for Good Chef Institute using React.js, TypeScript, Vite, Tailwind CSS, and React Router. Focused on performance, accessibility, and smooth UX.",
@@ -68,7 +128,7 @@ const webDevProjects = [
     gitLink: "https://github.com/Akash-code-0-1/chef_institute",
   },
   {
-    id: 5,
+    id: 7,
     title: "Personal Portfolio Website",
     description:
       "The portfolio you're currently viewing. Developed with React.js and Tailwind CSS, featuring dark mode, animations with Framer Motion, and responsive design for all screen sizes.",
@@ -86,7 +146,7 @@ const webDevProjects = [
       "https://mdtanvirahmed.vercel.app/",
   },
   {
-    id: 6,
+    id: 8,
     title: "Reading Table – Study Organizer App",
     description:
       "A productivity-focused web app for students to create to-do lists, track study time, set revision reminders, and upload reading materials. Built with React.js and Tailwind CSS.",
@@ -115,6 +175,7 @@ const techStack = [
         color: "text-black dark:text-white",
       },
       { Icon: SiRedux, name: "Redux", color: "text-purple-500" },
+      { Icon: SiReactquery, name: "TanStack Query", color: "text-rose-500" },
     ],
   },
   {
@@ -153,6 +214,7 @@ const techStack = [
         color: "text-gray-700 dark:text-white",
       },
       { Icon: FaAws, name: "AWS", color: "text-yellow-500" },
+      { Icon: FaServer, name: "VPS", color: "text-purple-500" },
       { Icon: FaGitAlt, name: "Git", color: "text-orange-500" },
     ],
   },
@@ -216,10 +278,9 @@ export default function WebDevTab() {
               className={`
                 relative rounded-2xl p-5 transition-all duration-300
                 border bg-white/60 dark:bg-gray-900/60 backdrop-blur-md
-                ${
-                  group.highlight
-                    ? "border-orange-400/40 shadow-lg shadow-orange-500/10"
-                    : "border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl"
+                ${group.highlight
+                  ? "border-orange-400/40 shadow-lg shadow-orange-500/10"
+                  : "border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl"
                 }
               `}
             >
@@ -255,12 +316,11 @@ export default function WebDevTab() {
                       <div
                         className={`
                           p-3 rounded-xl transition-all duration-300 shadow-sm
-                          ${
-                            isConcept
-                              ? "bg-gray-100 dark:bg-gray-800 text-[11px] font-medium px-3 py-2"
-                              : group.highlight
-                                ? "bg-orange-50 dark:bg-orange-900/20 group-hover:shadow-orange-500/20"
-                                : "bg-gray-50 dark:bg-gray-800/60 group-hover:bg-orange-50 dark:group-hover:bg-orange-900/20"
+                          ${isConcept
+                            ? "bg-gray-100 dark:bg-gray-800 text-[11px] font-medium px-3 py-2"
+                            : group.highlight
+                              ? "bg-orange-50 dark:bg-orange-900/20 group-hover:shadow-orange-500/20"
+                              : "bg-gray-50 dark:bg-gray-800/60 group-hover:bg-orange-50 dark:group-hover:bg-orange-900/20"
                           }
                         `}
                       >

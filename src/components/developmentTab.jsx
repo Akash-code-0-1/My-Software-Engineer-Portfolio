@@ -45,7 +45,7 @@ const webDevProjects = [
       "REST API Integration",
       "Third-Party API Integration",
     ],
-    video: "/creass.mp4",
+    video: "/creassMart.mp4",
     image: "",
     link: "https://creassmart.com/",
     gitLink:

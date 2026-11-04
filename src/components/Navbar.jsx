@@ -93,8 +93,6 @@ const Navbar = ({ darkMode, toggleDisplayMode }) => {
       </div>
     </motion.div>
   );
-
-  
 };
 
 export default Navbar;
